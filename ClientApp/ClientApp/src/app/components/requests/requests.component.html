@@ -1,0 +1,104 @@
+<div class="d-flex justify-content-center">
+  <div class="spinner-border text-primary" *ngIf="isLoading"></div>
+</div>
+
+<!--<form [formGroup]="requestForm" (ngSubmit)="createRequest()" class="editForm">-->
+<form [formGroup]="requestForm" class="editForm">
+  <!--<div class="container shadow p-3 mb- bg-white rounded"></div>-->
+  <p>
+    Form Status: {{ requestForm.status }}
+  </p>
+
+  <div *ngIf="requestForm.get('requesterName.firstName').invalid && (requestForm.get('requesterName.firstName').dirty || requestForm.get('requesterName.firstName').touched)"
+       class="alert alert-danger">
+    <div *ngIf="requestForm.get('requesterName.firstName').errors.required">
+      Firstname is required.
+    </div>
+    <div *ngIf="requestForm.get('requesterName.firstName').errors.maxlength">
+      Name must be at most 20 characters long.
+    </div>
+    <div *ngIf="requestForm.get('requesterName.firstName').errors.forbiddenName">
+      Name cannot be Bob.
+    </div>
+  </div>
+
+  <div *ngIf="requestForm.errors?.sameName && (requestForm.touched || requestForm.dirty)" class="cross-validation-error-message alert alert-danger">
+    Firstname cannot match alter fatherName.
+  </div>
+
+  <h4 class="head text-center">{{title}}</h4>
+  <div class="form-row" formGroupName="requesterName">
+    <div class="col form-group">
+      <label for="firstName">FirstName</label>
+      <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control" required>
+    </div>
+    <div class="col form-group">
+      <label for="fatherName">FatherName</label>
+      <input type="text" id="fatherName" name="fatherName" formControlName="fatherName" class="form-control" required>
+    </div>
+    <div class="col form-group">
+      <label for="grandFatherName">GrandFatherName</label>
+      <input type="text" id="grandFatherName" name="grandFatherName" formControlName="grandFatherName" class="form-control" required>
+    </div>
+    <div class="col form-group">
+      <label for="familyName">FamilyName</label>
+      <input type="text" id="familyName" name="familyName" formControlName="familyName" class="form-control" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-2 form-group">
+      <label for="sel-genders">Gender</label>
+      <select id="sel-genders" name="sel-genders" class="custom-select" formControlName="genderId" (change)="selectGender();" required>
+        <option selected="" value=""></option>
+        <option [ngValue]="gender.Id" [attr.data-code]="gender.Code" *ngFor="let gender of gendersList">
+          {{gender.Name}}
+        </option>
+      </select>
+    </div>
+    <div class="col form-group">
+      <label for="NID">NID</label>
+      <input type="text" id="NID" name="NID" formControlName="NID" class="form-control">
+    </div>
+    <div class="col form-group">
+      <label for="motherFullName">MotherFullName</label>
+      <input type="text" id="motherFullName" name="motherFullName" formControlName="motherFullName" class="form-control">
+    </div>
+  </div>
+  <div class="form-row" formGroupName="contactDetails">
+    <div class="col-3 form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" formControlName="email" class="form-control">
+    </div>
+    <div class="col form-group">
+      <label for="mobile1">Mobile1</label>
+      <input type="tel" id="mobile1" name="mobile1" formControlName="mobile1" class="form-control">
+    </div>
+    <div class="col form-group">
+      <label for="mobile2">Mobile2</label>
+      <input type="tel" id="mobile2" name="mobile2" formControlName="mobile2" class="form-control">
+    </div>
+    <div class="col form-group">
+      <label for="phoneHome">PhoneHome</label>
+      <input type="tel" id="phoneHome" name="phoneHome" formControlName="phoneHome" class="form-control">
+    </div>
+    <div class="col form-group">
+      <label for="phoneWork">PhoneWork</label>
+      <input type="tel" id="phoneWork" name="phoneWork" formControlName="phoneWork" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info  rounded-pill" [disabled]="!requestForm.valid" (click)="goNext(requestForm)">
+        Next
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div>
+
+  <!--<div class="form-row">
+    <div>
+      <button type="submit" [disabled]="!requestForm.valid">Save</button>
+    </div>
+  </div>-->
+</form>

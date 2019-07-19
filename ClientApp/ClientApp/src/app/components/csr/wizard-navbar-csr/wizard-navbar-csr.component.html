@@ -1,0 +1,44 @@
+  <!--<div class="board-inner">-->
+    <ul class="nav nav-tabs">
+      <div class="liner"></div>
+
+      <!-- circular user icon -->
+      <li>
+        <a routerLink="requester" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" data-toggle="tab" title="personal">
+          <span class="round-tabs one">
+            <i class="fa fa-user"></i>
+          </span>
+        </a>
+      </li>
+
+      <!-- circular tasks icon -->
+      <li>
+        <!--routerLink="[{ outlets: { csr-outlet: ['csr-doc'] } }]"-->
+        <a routerLink="address" routerLinkActive="active" data-toggle="tab" title="work">
+          <span class="round-tabs two">
+            <i class="fa fa-home"></i>
+          </span>
+        </a>
+      </li>
+
+      <!-- circular home icon -->
+      <li>
+        <a routerLink="doc" routerLinkActive="active" data-toggle="tab" title="address">
+          <span class="round-tabs three">
+            <i class="fa fa-file-alt"></i>
+          </span>
+        </a>
+      </li>
+
+      <!-- circular ok icon -->
+      <li>
+        <a routerLink="confirm" routerLinkActive="active" data-toggle="tab" title="completed">
+          <span class="round-tabs last">
+            <i class="fa fa-check"></i>
+          </span>
+        </a>
+      </li>
+
+    </ul>
+    <!--<div class="clearfix"></div>-->
+  <!--</div>-->

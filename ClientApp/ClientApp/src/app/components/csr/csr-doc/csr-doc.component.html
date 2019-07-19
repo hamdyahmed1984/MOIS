@@ -1,0 +1,21 @@
+<form [formGroup]="csrDocForm" class="editForm">
+  <h4 class="head text-center">{{title}}</h4>
+  <div class="form-row">
+    <div class="col form-group">
+      <label for="issueDestination">Issue Destination</label>
+      <input type="text" id="issueDestination" name="issueDestination" formControlName="issueDestination" class="form-control" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info rounded-pill" (click)="goPrevious()">
+        Previous
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-left"></span>
+      </button>
+      <button type="button" class="btn btn-info rounded-pill" [disabled]="!csrDocForm.valid" (click)="goNext(csrDocForm)">
+        Next
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div>
+</form>

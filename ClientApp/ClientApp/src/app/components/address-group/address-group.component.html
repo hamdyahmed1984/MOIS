@@ -1,0 +1,33 @@
+<form>
+  <h4 class="head text-center">{{title}}</h4>
+  <div class="form-row">
+    <!--<div class="form-check">
+      <input class="form-check-input" type="checkbox" id="residencyAddressSameAsDeliveryAddress" formControlName="residencyAddressSameAsDeliveryAddress">
+      <label class="form-check-label" for="residencyAddressSameAsDeliveryAddress">Delivery address is the same as residency address</label>
+    </div>-->
+    <!--<div class="custom-control custom-checkbox">
+      <input class="custom-control-input" type="checkbox" id="residencyAddressSameAsDeliveryAddress" formControlName="residencyAddressSameAsDeliveryAddress">
+      <label class="custom-control-label" for="residencyAddressSameAsDeliveryAddress">Delivery address is the same as residency address</label>
+    </div>-->
+
+    <div class="custom-control custom-switch">
+      <input class="custom-control-input" type="checkbox" id="residencyAddressSameAsDeliveryAddress" [formControl]="residencyAddressSameAsDeliveryAddress">
+      <label class="custom-control-label" for="residencyAddressSameAsDeliveryAddress">Delivery address is the same as residency address</label>
+    </div>
+  </div>
+  <app-address #residencyAddressView (notify)="onNotifyResidencyAddressPropChange($event)"></app-address>
+  <app-address #deliveryAddressView (notify)="onNotifyDeliveryAddressPropChange($event)" *ngIf=!residencyAddressSameAsDeliveryAddress.value></app-address>
+
+  <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info  rounded-pill" (click)="goPrevious()">
+        Previous
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-left"></span>
+      </button>
+      <button type="button" class="btn btn-info  rounded-pill" [disabled]="!isAddressGroupModelValid()" (click)="goNext()">
+        Next
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,59 @@
+<div class="container" [formGroup]="addressForm">
+  <div class="form-row">
+    <div class="col form-group">
+      <label for="flatNumber">FlatNumber</label>
+      <input type="text" id="flatNumber" name="flatNumber" formControlName="flatNumber" class="form-control" (change)="notifyAddressPropChange();">
+      <small id="passwordHelpBlock" class="form-text text-danger">
+        This field is required.
+      </small>
+    </div>
+    <div class="col form-group">
+      <label for="floorNumber">FloorNumber</label>
+      <input type="text" id="floorNumber" name="floorNumber" formControlName="floorNumber" class="form-control" (change)="notifyAddressPropChange();">
+    </div>
+    <!--<div class="w-100"></div>-->
+    <div class="col form-group">
+      <label for="buildingNumber">BuildingNumber</label>
+      <input type="text" id="buildingNumber" name="buildingNumber" formControlName="buildingNumber" class="form-control" (change)="notifyAddressPropChange();">
+    </div>
+    <div class="col form-group">
+      <label for="streetName">StreetName</label>
+      <input type="text" id="streetName" name="streetName" formControlName="streetName" class="form-control" (change)="notifyAddressPropChange();">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col form-group">
+      <label for="districtName">DistrictName</label>
+      <input type="text" id="districtName" name="districtName" formControlName="districtName" class="form-control" (change)="notifyAddressPropChange();">
+    </div>
+    <div class="col form-group">
+      <label for="sel-govs">GovId</label>
+      <select id="sel-govs" name="sel-govs" formControlName="governorateId" (change)="selectGov();" class="custom-select">
+        <option selected="" value=""></option>
+        <option [ngValue]="gov.Id" [attr.data-code]="gov.Code" *ngFor="let gov of govsList">
+          {{gov.Name}}
+        </option>
+      </select>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="sel-police-depts">PoliceDeptId</label>
+        <select id="sel-police-depts" name="sel--police-depts" formControlName="policeDepartmentId" (change)="selectPoliceDept();" class="custom-select">
+          <option selected="" value=""></option>
+          <option [ngValue]="policeDept.Id" [attr.data-code]="policeDept.Code" *ngFor="let policeDept of policeDeptsList">
+            {{policeDept.Name}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col form-group">
+      <label for="sel-postal-codes">PostalCodeId</label>
+      <select id="sel-postal-codes" name="sel-postal-codes" formControlName="postalCodeId" (change)="selectPostalCode();" class="custom-select">
+        <option selected="" value=""></option>
+        <option [ngValue]="postalCode.Id" [attr.data-code]="postalCode.Code" *ngFor="let postalCode of postalCodesList">
+          {{postalCode.Name}}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

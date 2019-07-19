@@ -1,0 +1,3901 @@
+{
+  "Domain.dll": {
+    "D:\\Private\\MOIS\\Domain\\Constants.cs": {
+      "Domain.Constants": {
+        "System.Void Domain.Constants::.cctor()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\VerificationPlatform\\VerificationModel.cs": {
+      "Domain.VerificationPlatform.VerificationModel": {
+        "System.String Domain.VerificationPlatform.VerificationModel::get_Status()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_Message()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_FullName()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_NID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_NidFactoryNo()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_Email()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_MotherFirstName()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_Mobile()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_GovernorateId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_Address()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.VerificationPlatform.VerificationModel::get_JobTitle()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\ValueObjects\\ContactDetails.cs": {
+      "Domain.ValueObjects.ContactDetails": {
+        "System.String Domain.ValueObjects.ContactDetails::get_Mobile1()": {
+          "Lines": {
+            "10": 30
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.ContactDetails::get_Mobile2()": {
+          "Lines": {
+            "11": 30
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.ContactDetails::get_PhoneHome()": {
+          "Lines": {
+            "12": 30
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.ContactDetails::get_PhoneWork()": {
+          "Lines": {
+            "13": 28
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.ContactDetails::get_Email()": {
+          "Lines": {
+            "14": 28
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.ContactDetails::ToString()": {
+          "Lines": {
+            "52": 2,
+            "53": 2,
+            "54": 2
+          },
+          "Branches": []
+        },
+        "System.Void Domain.ValueObjects.ContactDetails::.ctor()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.ValueObjects.ContactDetails::.ctor(System.String,System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "20": 29,
+            "21": 29,
+            "22": 29,
+            "23": 1,
+            "24": 28,
+            "25": 1,
+            "27": 27,
+            "28": 27,
+            "29": 27,
+            "30": 1,
+            "32": 26,
+            "33": 2,
+            "34": 2,
+            "35": 2,
+            "36": 1,
+            "37": 1,
+            "39": 25,
+            "40": 25,
+            "41": 25,
+            "42": 1,
+            "44": 24,
+            "45": 24,
+            "46": 24,
+            "47": 24,
+            "48": 24,
+            "49": 24
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 16,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 28
+            },
+            {
+              "Line": 24,
+              "Offset": 38,
+              "EndOffset": 40,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 24,
+              "Offset": 38,
+              "EndOffset": 51,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 27
+            },
+            {
+              "Line": 29,
+              "Offset": 83,
+              "EndOffset": 85,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 29,
+              "Offset": 83,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 26
+            },
+            {
+              "Line": 32,
+              "Offset": 109,
+              "EndOffset": 111,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 35,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 133,
+              "EndOffset": 146,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 109,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 25
+            },
+            {
+              "Line": 41,
+              "Offset": 180,
+              "EndOffset": 182,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 180,
+              "EndOffset": 193,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 24
+            }
+          ]
+        }
+      },
+      "Domain.ValueObjects.ContactDetails/<GetEqualityComponents>d__25": {
+        "System.Boolean Domain.ValueObjects.ContactDetails/<GetEqualityComponents>d__25::MoveNext()": {
+          "Lines": {
+            "57": 4,
+            "58": 4,
+            "59": 4,
+            "60": 4,
+            "61": 2,
+            "62": 2,
+            "63": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\ValueObjects\\NID.cs": {
+      "Domain.ValueObjects.NID": {
+        "System.String Domain.ValueObjects.NID::get_NationalIdenNumber()": {
+          "Lines": {
+            "10": 73
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.NID::ToString()": {
+          "Lines": {
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 8,
+              "EndOffset": 10,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 8,
+              "EndOffset": 16,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Boolean Domain.ValueObjects.NID::IsNidValid()": {
+          "Lines": {
+            "39": 2,
+            "42": 2,
+            "43": 2,
+            "44": 2,
+            "45": 2,
+            "46": 2,
+            "47": 2,
+            "48": 2,
+            "49": 2,
+            "50": 2,
+            "51": 2,
+            "52": 2,
+            "53": 2,
+            "54": 2,
+            "55": 2,
+            "56": 2,
+            "57": 2,
+            "58": 2,
+            "59": 2,
+            "60": 2,
+            "61": 2,
+            "62": 2,
+            "63": 2,
+            "64": 2,
+            "65": 2,
+            "66": 2,
+            "67": 2,
+            "68": 2,
+            "69": 2,
+            "70": 2,
+            "71": 2,
+            "72": 2,
+            "75": 1,
+            "76": 1,
+            "78": 0,
+            "79": 0,
+            "81": 2,
+            "82": 1,
+            "83": 1,
+            "84": 2
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 530,
+              "EndOffset": 534,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 72,
+              "Offset": 538,
+              "EndOffset": 542,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 72,
+              "Offset": 530,
+              "EndOffset": 547,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 538,
+              "EndOffset": 552,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 81,
+              "Offset": 562,
+              "EndOffset": 564,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 81,
+              "Offset": 562,
+              "EndOffset": 569,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.String Domain.ValueObjects.NID::GetGender()": {
+          "Lines": {
+            "87": 2,
+            "88": 2,
+            "89": 2,
+            "90": 2,
+            "91": 1,
+            "92": 1,
+            "94": 1,
+            "95": 2
+          },
+          "Branches": [
+            {
+              "Line": 90,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 90,
+              "Offset": 30,
+              "EndOffset": 41,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.DateTime Domain.ValueObjects.NID::GetDateOfBirth()": {
+          "Lines": {
+            "98": 1,
+            "99": 1,
+            "100": 1,
+            "101": 1,
+            "102": 1,
+            "103": 1,
+            "104": 1,
+            "105": 1,
+            "106": 1,
+            "107": 1,
+            "110": 0,
+            "111": 0,
+            "113": 1,
+            "114": 1,
+            "116": 0,
+            "117": 0,
+            "119": 1,
+            "120": 1,
+            "121": 1,
+            "122": 1,
+            "123": 1,
+            "124": 1,
+            "125": 1,
+            "126": 1
+          },
+          "Branches": [
+            {
+              "Line": 107,
+              "Offset": 106,
+              "EndOffset": 125,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 106,
+              "EndOffset": 153,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 107,
+              "Offset": 106,
+              "EndOffset": 181,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 106,
+              "EndOffset": 209,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.String Domain.ValueObjects.NID::GetGovernorate()": {
+          "Lines": {
+            "128": 1,
+            "129": 1,
+            "130": 1,
+            "131": 1,
+            "132": 1,
+            "135": 0,
+            "137": 0,
+            "139": 0,
+            "141": 0,
+            "143": 1,
+            "145": 0,
+            "147": 0,
+            "149": 0,
+            "151": 0,
+            "153": 0,
+            "155": 0,
+            "157": 0,
+            "159": 0,
+            "161": 0,
+            "163": 0,
+            "165": 0,
+            "167": 0,
+            "169": 0,
+            "171": 0,
+            "173": 0,
+            "175": 0,
+            "177": 0,
+            "179": 0,
+            "181": 0,
+            "183": 0,
+            "185": 0,
+            "187": 0,
+            "189": 0,
+            "191": 0,
+            "193": 0,
+            "195": 0,
+            "197": 0,
+            "198": 0,
+            "201": 1
+          },
+          "Branches": [
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 204,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 207,
+              "EndOffset": 214,
+              "Path": 0,
+              "Ordinal": 36,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 239,
+              "Path": 11,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 251,
+              "Path": 12,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 263,
+              "Path": 13,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 275,
+              "Path": 14,
+              "Ordinal": 14,
+              "Hits": 1
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 287,
+              "Path": 15,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 299,
+              "Path": 16,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 311,
+              "Path": 17,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 323,
+              "Path": 18,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 335,
+              "Path": 19,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 347,
+              "Path": 2,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 359,
+              "Path": 21,
+              "Ordinal": 21,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 371,
+              "Path": 22,
+              "Ordinal": 22,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 383,
+              "Path": 23,
+              "Ordinal": 23,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 395,
+              "Path": 24,
+              "Ordinal": 24,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 407,
+              "Path": 25,
+              "Ordinal": 25,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 419,
+              "Path": 26,
+              "Ordinal": 26,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 431,
+              "Path": 27,
+              "Ordinal": 27,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 440,
+              "Path": 28,
+              "Ordinal": 28,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 449,
+              "Path": 29,
+              "Ordinal": 29,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 458,
+              "Path": 3,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 467,
+              "Path": 31,
+              "Ordinal": 31,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 476,
+              "Path": 32,
+              "Ordinal": 32,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 485,
+              "Path": 33,
+              "Ordinal": 33,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 494,
+              "Path": 34,
+              "Ordinal": 34,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 503,
+              "Path": 35,
+              "Ordinal": 35,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 512,
+              "Path": 4,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 521,
+              "Path": 5,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 530,
+              "Path": 6,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 207,
+              "EndOffset": 539,
+              "Path": 1,
+              "Ordinal": 37,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 217,
+              "EndOffset": 548,
+              "Path": 1,
+              "Ordinal": 39,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 7,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 8,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 9,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 10,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 20,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 57,
+              "EndOffset": 557,
+              "Path": 30,
+              "Ordinal": 30,
+              "Hits": 0
+            },
+            {
+              "Line": 132,
+              "Offset": 217,
+              "EndOffset": 557,
+              "Path": 0,
+              "Ordinal": 38,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void Domain.ValueObjects.NID::.ctor()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.ValueObjects.NID::.ctor(System.String)": {
+          "Lines": {
+            "14": 31,
+            "15": 31,
+            "16": 31,
+            "17": 1,
+            "19": 30,
+            "20": 30,
+            "22": 30,
+            "23": 1,
+            "25": 29,
+            "26": 29
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 16,
+              "Offset": 16,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 30
+            },
+            {
+              "Line": 22,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 22,
+              "Offset": 59,
+              "EndOffset": 72,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 29
+            }
+          ]
+        }
+      },
+      "Domain.ValueObjects.NID/<GetEqualityComponents>d__8": {
+        "System.Boolean Domain.ValueObjects.NID/<GetEqualityComponents>d__8::MoveNext()": {
+          "Lines": {
+            "34": 4,
+            "35": 4,
+            "36": 2
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 14,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 14,
+              "EndOffset": 58,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\ValueObjects\\RequesterName.cs": {
+      "Domain.ValueObjects.RequesterName": {
+        "System.String Domain.ValueObjects.RequesterName::get_FirstName()": {
+          "Lines": {
+            "10": 50
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.RequesterName::get_FatherName()": {
+          "Lines": {
+            "11": 50
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.RequesterName::get_GrandFatherName()": {
+          "Lines": {
+            "12": 48
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.RequesterName::get_FamilyName()": {
+          "Lines": {
+            "13": 48
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.RequesterName::get_FullName()": {
+          "Lines": {
+            "14": 24
+          },
+          "Branches": []
+        },
+        "System.String Domain.ValueObjects.RequesterName::ToString()": {
+          "Lines": {
+            "36": 23,
+            "37": 23,
+            "38": 23
+          },
+          "Branches": []
+        },
+        "System.Void Domain.ValueObjects.RequesterName::.ctor()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.ValueObjects.RequesterName::.ctor(System.String,System.String,System.String,System.String)": {
+          "Lines": {
+            "17": 27,
+            "18": 27,
+            "19": 27,
+            "20": 1,
+            "21": 26,
+            "22": 1,
+            "23": 25,
+            "24": 1,
+            "25": 24,
+            "26": 1,
+            "28": 23,
+            "29": 23,
+            "30": 23,
+            "31": 23,
+            "32": 23,
+            "33": 23
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 19,
+              "Offset": 16,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 26
+            },
+            {
+              "Line": 21,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 21,
+              "Offset": 37,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 25
+            },
+            {
+              "Line": 23,
+              "Offset": 58,
+              "EndOffset": 60,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 23,
+              "Offset": 58,
+              "EndOffset": 71,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 24
+            },
+            {
+              "Line": 25,
+              "Offset": 80,
+              "EndOffset": 82,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 1
+            },
+            {
+              "Line": 25,
+              "Offset": 80,
+              "EndOffset": 93,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 23
+            }
+          ]
+        }
+      },
+      "Domain.ValueObjects.RequesterName/<GetEqualityComponents>d__23": {
+        "System.Boolean Domain.ValueObjects.RequesterName/<GetEqualityComponents>d__23::MoveNext()": {
+          "Lines": {
+            "41": 4,
+            "42": 4,
+            "43": 4,
+            "44": 2,
+            "45": 2,
+            "46": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\ValueObjects\\ValueObject.cs": {
+      "Domain.ValueObjects.ValueObject": {
+        "System.Boolean Domain.ValueObjects.ValueObject::Equals(System.Object)": {
+          "Lines": {
+            "12": 6,
+            "13": 6,
+            "14": 0,
+            "16": 6,
+            "17": 0,
+            "19": 6,
+            "21": 6,
+            "22": 6
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 6
+            },
+            {
+              "Line": 16,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 32,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Int32 Domain.ValueObjects.ValueObject::GetHashCode()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 14,
+              "EndOffset": 16,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 14,
+              "EndOffset": 39,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean Domain.ValueObjects.ValueObject::op_Equality(Domain.ValueObjects.ValueObject,Domain.ValueObjects.ValueObject)": {
+          "Lines": {
+            "34": 9,
+            "35": 9,
+            "36": 0,
+            "38": 9,
+            "39": 3,
+            "41": 6,
+            "42": 9
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 2,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 8
+            },
+            {
+              "Line": 35,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 13,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 9
+            },
+            {
+              "Line": 38,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 8
+            },
+            {
+              "Line": 38,
+              "Offset": 20,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 3
+            },
+            {
+              "Line": 38,
+              "Offset": 31,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 6
+            }
+          ]
+        },
+        "System.Boolean Domain.ValueObjects.ValueObject::op_Inequality(Domain.ValueObjects.ValueObject,Domain.ValueObjects.ValueObject)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Exceptions\\DomainException.cs": {
+      "Domain.Exceptions.DomainException": {
+        "System.Void Domain.Exceptions.DomainException::.ctor(System.String)": {
+          "Lines": {
+            "7": 21
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Exceptions\\InvalidFormatException.cs": {
+      "Domain.Exceptions.InvalidFormatException": {
+        "System.Void Domain.Exceptions.InvalidFormatException::.ctor(System.String)": {
+          "Lines": {
+            "7": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Exceptions\\ShouldNotBeEmptyException.cs": {
+      "Domain.Exceptions.ShouldNotBeEmptyException": {
+        "System.Void Domain.Exceptions.ShouldNotBeEmptyException::.ctor(System.String)": {
+          "Lines": {
+            "6": 7,
+            "7": 14
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Address.cs": {
+      "Domain.Entities.Address": {
+        "System.Int32 Domain.Entities.Address::get_FlatNumber()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Address::get_FloorNumber()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Address::get_BuildingNumber()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Address::get_StreetName()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Address::get_DistrictName()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Address::get_GovernorateId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Governorate Domain.Entities.Address::get_Governorate()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Address::get_PoliceDepartmentId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.PoliceDepartment Domain.Entities.Address::get_PoliceDepartment()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Address::get_PostalCodeId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.PostalCode Domain.Entities.Address::get_PostalCode()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\BaseEntity.cs": {
+      "Domain.Entities.BaseEntity": {
+        "System.Int32 Domain.Entities.BaseEntity::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\DocumentBase.cs": {
+      "Domain.Entities.DocumentBase": {
+        "System.Int32 Domain.Entities.DocumentBase::get_NumberOfCopies()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.DocumentBase::get_RequestId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.DocumentBase::get_Request()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.DocumentBase::get_StateId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.State Domain.Entities.DocumentBase::get_State()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.DocumentBase::get_Price()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.DocumentBase::get_IPAddress()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.DocumentBase::get_InsertedDate()": {
+          "Lines": {
+            "20": 11
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Entities.DocumentBase::get_LastEditDate()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\EligibleNID.cs": {
+      "Domain.Entities.EligibleNID": {
+        "System.String Domain.Entities.EligibleNID::get_HashedNID()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.EligibleNID::get_InsertedDate()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\ForeignContractor.cs": {
+      "Domain.Entities.ForeignContractor": {
+        "System.Int32 Domain.Entities.ForeignContractor::get_ContractorCountryId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Country Domain.Entities.ForeignContractor::get_ContractorCountry()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_ContractorName()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.ForeignContractor::get_ContractorTypeId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.ForeignContractorType Domain.Entities.ForeignContractor::get_ContractorType()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_ContractorActivity()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_ContractorJobName()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.ForeignContractor::get_ContractTypeId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.ForeignContractType Domain.Entities.ForeignContractor::get_ContractType()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.ForeignContractor::get_YearsToRenew()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.ForeignContractor::get_WorkPlaceIsOnShips()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_VisaNoOrAccomodationNo()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.ForeignContractor::get_CurrencyId()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Currency Domain.Entities.ForeignContractor::get_Currency()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.ForeignContractor::get_Salary()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.ForeignContractor::get_AddressCountryId()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Country Domain.Entities.ForeignContractor::get_AddressCountry()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_AddressCity()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_AddressDistrict()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_AddressStreet()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.ForeignContractor::get_AddressBuilding()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\LookupBase.cs": {
+      "Domain.Entities.LookupBase": {
+        "System.String Domain.Entities.LookupBase::get_Code()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.LookupBase::get_Name()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Passport.cs": {
+      "Domain.Entities.Passport": {
+        "System.String Domain.Entities.Passport::get_PassportNumber()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Passport::get_PassportIssueDate()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Passport::get_PassportIssueCountryId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Country Domain.Entities.Passport::get_PassportIssueCountry()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Passport::get_JobInPassportId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Job Domain.Entities.Passport::get_JobInPassport()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Passport::get_LastLeaveDate()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Passport::get_LastReturnDate()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Passport::get_PassportIssuerId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.PassportIssuer Domain.Entities.Passport::get_PassportIssuer()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\PaymentDetails.cs": {
+      "Domain.Entities.PaymentDetails": {
+        "System.Int32 Domain.Entities.PaymentDetails::get_RequestId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.PaymentDetails::get_Request()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.PaymentDetails::get_Code()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.PaymentDetails::get_Name()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.PaymentDetails::get_Quantity()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.PaymentDetails::get_Price()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.PaymentDetails::get_Notes()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.PaymentDetails::get_IPAddress()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.PaymentDetails::get_InsertedDate()": {
+          "Lines": {
+            "17": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\PublicSector.cs": {
+      "Domain.Entities.PublicSector": {
+        "System.Nullable`1<System.Int32> Domain.Entities.PublicSector::get_GovernmentalEstablishmentId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.GovernmentalEstablishment Domain.Entities.PublicSector::get_GovernmentalEstablishment()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.PublicSector::get_VacationTypeId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.VacationType Domain.Entities.PublicSector::get_VacationType()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.PublicSector::get_VacationStart()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.PublicSector::get_VacationEnd()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.PublicSector::get_VacationApprovedYears()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Request.cs": {
+      "Domain.Entities.Request": {
+        "System.Int32 Domain.Entities.Request::get_Id()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Request::get_Code()": {
+          "Lines": {
+            "12": 17
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.RequesterName Domain.Entities.Request::get_Name()": {
+          "Lines": {
+            "13": 17
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Request::get_MotherFullName()": {
+          "Lines": {
+            "14": 17
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Gender Domain.Entities.Request::get_Gender()": {
+          "Lines": {
+            "15": 17
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Request::get_GenderId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.NID Domain.Entities.Request::get_NID()": {
+          "Lines": {
+            "17": 17
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.ContactDetails Domain.Entities.Request::get_ContactDetails()": {
+          "Lines": {
+            "18": 17
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Address Domain.Entities.Request::get_ResidencyAddress()": {
+          "Lines": {
+            "19": 17
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Request::get_ResidencyAddressId()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Address Domain.Entities.Request::get_DeliveryAddress()": {
+          "Lines": {
+            "21": 17
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Request::get_DeliveryAddressId()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.PaymentMethod Domain.Entities.Request::get_PaymentMethod()": {
+          "Lines": {
+            "23": 19
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Request::get_PaymentMethodId()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Issuer Domain.Entities.Request::get_Issuer()": {
+          "Lines": {
+            "25": 17
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Request::get_IssuerId()": {
+          "Lines": {
+            "26": 2
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.Request::get_Price()": {
+          "Lines": {
+            "28": 2
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.Request::get_PostalFees()": {
+          "Lines": {
+            "29": 2
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitRenew> Domain.Entities.Request::get_WorkPermitRenews()": {
+          "Lines": {
+            "49": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_WorkPermitRenews(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitRenew>)": {
+          "Lines": {
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitReplace> Domain.Entities.Request::get_WorkPermitReplaces()": {
+          "Lines": {
+            "54": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_WorkPermitReplaces(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitReplace>)": {
+          "Lines": {
+            "55": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitClearance> Domain.Entities.Request::get_WorkPermitClearances()": {
+          "Lines": {
+            "59": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_WorkPermitClearances(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.WorkPermitClearance>)": {
+          "Lines": {
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.CriminalStateRecord> Domain.Entities.Request::get_CriminalStateRecords()": {
+          "Lines": {
+            "64": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_CriminalStateRecords(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.CriminalStateRecord>)": {
+          "Lines": {
+            "65": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.BirthDoc> Domain.Entities.Request::get_BirthDocs()": {
+          "Lines": {
+            "70": 1,
+            "71": 1,
+            "72": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_BirthDocs(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.BirthDoc>)": {
+          "Lines": {
+            "74": 0,
+            "76": 0,
+            "77": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.DeathDoc> Domain.Entities.Request::get_DeathDocs()": {
+          "Lines": {
+            "81": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_DeathDocs(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.DeathDoc>)": {
+          "Lines": {
+            "82": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.DivorceDoc> Domain.Entities.Request::get_DivorceDocs()": {
+          "Lines": {
+            "86": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_DivorceDocs(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.DivorceDoc>)": {
+          "Lines": {
+            "87": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.FamilyRecord> Domain.Entities.Request::get_FamilyRecords()": {
+          "Lines": {
+            "91": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_FamilyRecords(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.FamilyRecord>)": {
+          "Lines": {
+            "92": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.MarriageDoc> Domain.Entities.Request::get_MarriageDocs()": {
+          "Lines": {
+            "96": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_MarriageDocs(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.MarriageDoc>)": {
+          "Lines": {
+            "97": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.NidDoc> Domain.Entities.Request::get_NidDoc()": {
+          "Lines": {
+            "101": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_NidDoc(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.NidDoc>)": {
+          "Lines": {
+            "102": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.PersonalRecord> Domain.Entities.Request::get_PersonalRecords()": {
+          "Lines": {
+            "106": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_PersonalRecords(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.Documents.PersonalRecord>)": {
+          "Lines": {
+            "107": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.RequestState> Domain.Entities.Request::get_RequestStates()": {
+          "Lines": {
+            "111": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_RequestStates(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.RequestState>)": {
+          "Lines": {
+            "112": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.PaymentDetails> Domain.Entities.Request::get_PaymentDetails()": {
+          "Lines": {
+            "116": 3
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::set_PaymentDetails(System.Collections.Generic.IReadOnlyCollection`1<Domain.Entities.PaymentDetails>)": {
+          "Lines": {
+            "117": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.Request::SetIssueId(System.Int32)": {
+          "Lines": {
+            "154": 1,
+            "155": 1,
+            "156": 1,
+            "157": 1
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.Request::SetPrice(System.Decimal)": {
+          "Lines": {
+            "160": 1,
+            "161": 1,
+            "162": 1,
+            "163": 1
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.Request::SetPostalFees(System.Decimal)": {
+          "Lines": {
+            "166": 1,
+            "167": 1,
+            "168": 1,
+            "169": 1
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddRequestState(Domain.Entities.RequestState)": {
+          "Lines": {
+            "172": 2,
+            "173": 2,
+            "174": 2,
+            "175": 2
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddRequestStates(System.Collections.Generic.IEnumerable`1<Domain.Entities.RequestState>)": {
+          "Lines": {
+            "177": 0,
+            "178": 0,
+            "179": 0,
+            "180": 0
+          },
+          "Branches": [
+            {
+              "Line": 179,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 179,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddPaymentDetail(Domain.Entities.PaymentDetails)": {
+          "Lines": {
+            "182": 2,
+            "183": 2,
+            "184": 2,
+            "185": 2
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddPaymentDetails(System.Collections.Generic.IEnumerable`1<Domain.Entities.PaymentDetails>)": {
+          "Lines": {
+            "187": 0,
+            "188": 0,
+            "189": 0,
+            "190": 0
+          },
+          "Branches": [
+            {
+              "Line": 189,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 189,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddWorkPermitRenewDoc(Domain.Entities.Documents.WorkPermitRenew)": {
+          "Lines": {
+            "192": 1,
+            "193": 1,
+            "194": 1,
+            "195": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddWorkPermitRenews(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.WorkPermitRenew>)": {
+          "Lines": {
+            "197": 0,
+            "198": 0,
+            "199": 0,
+            "200": 0
+          },
+          "Branches": [
+            {
+              "Line": 199,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 199,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddWorkPermitReplaceDoc(Domain.Entities.Documents.WorkPermitReplace)": {
+          "Lines": {
+            "202": 1,
+            "203": 1,
+            "204": 1,
+            "205": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddWorkPermitReplaces(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.WorkPermitReplace>)": {
+          "Lines": {
+            "207": 0,
+            "208": 0,
+            "209": 0,
+            "210": 0
+          },
+          "Branches": [
+            {
+              "Line": 209,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 209,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddDWorkPermitClearanceDoc(Domain.Entities.Documents.WorkPermitClearance)": {
+          "Lines": {
+            "212": 1,
+            "213": 1,
+            "214": 1,
+            "215": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddWorkPermitClearances(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.WorkPermitClearance>)": {
+          "Lines": {
+            "217": 0,
+            "218": 0,
+            "219": 0,
+            "220": 0
+          },
+          "Branches": [
+            {
+              "Line": 219,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 219,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddCriminalStateRecordDoc(Domain.Entities.Documents.CriminalStateRecord)": {
+          "Lines": {
+            "222": 1,
+            "223": 1,
+            "224": 1,
+            "225": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddCriminalStateRecords(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.CriminalStateRecord>)": {
+          "Lines": {
+            "227": 0,
+            "228": 0,
+            "229": 0,
+            "230": 0
+          },
+          "Branches": [
+            {
+              "Line": 229,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 229,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddBirthDoc(Domain.Entities.Documents.BirthDoc)": {
+          "Lines": {
+            "232": 1,
+            "233": 1,
+            "234": 1,
+            "235": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddBirthDocs(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.BirthDoc>)": {
+          "Lines": {
+            "237": 0,
+            "238": 0,
+            "239": 0,
+            "240": 0
+          },
+          "Branches": [
+            {
+              "Line": 239,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 239,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddDeathRecordDoc(Domain.Entities.Documents.DeathDoc)": {
+          "Lines": {
+            "242": 1,
+            "243": 1,
+            "244": 1,
+            "245": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddDeathDocs(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.DeathDoc>)": {
+          "Lines": {
+            "247": 0,
+            "248": 0,
+            "249": 0,
+            "250": 0
+          },
+          "Branches": [
+            {
+              "Line": 249,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 249,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddDivorceRecordDoc(Domain.Entities.Documents.DivorceDoc)": {
+          "Lines": {
+            "252": 1,
+            "253": 1,
+            "254": 1,
+            "255": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddDivorceRecords(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.DivorceDoc>)": {
+          "Lines": {
+            "257": 0,
+            "258": 0,
+            "259": 0,
+            "260": 0
+          },
+          "Branches": [
+            {
+              "Line": 259,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 259,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddFamilyRecordDoc(Domain.Entities.Documents.FamilyRecord)": {
+          "Lines": {
+            "262": 1,
+            "263": 1,
+            "264": 1,
+            "265": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddFamilyRecords(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.FamilyRecord>)": {
+          "Lines": {
+            "267": 0,
+            "268": 0,
+            "269": 0,
+            "270": 0
+          },
+          "Branches": [
+            {
+              "Line": 269,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 269,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddMarriageRecordDoc(Domain.Entities.Documents.MarriageDoc)": {
+          "Lines": {
+            "272": 1,
+            "273": 1,
+            "274": 1,
+            "275": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddMarriageRecords(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.MarriageDoc>)": {
+          "Lines": {
+            "277": 0,
+            "278": 0,
+            "279": 0,
+            "280": 0
+          },
+          "Branches": [
+            {
+              "Line": 279,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 279,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddNidDoc(Domain.Entities.Documents.NidDoc)": {
+          "Lines": {
+            "282": 1,
+            "283": 1,
+            "284": 1,
+            "285": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddNidDocs(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.NidDoc>)": {
+          "Lines": {
+            "287": 0,
+            "288": 0,
+            "289": 0,
+            "290": 0
+          },
+          "Branches": [
+            {
+              "Line": 289,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 289,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::AddPersonalRecordDoc(Domain.Entities.Documents.PersonalRecord)": {
+          "Lines": {
+            "292": 1,
+            "293": 1,
+            "294": 1,
+            "295": 1
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::AddPersonalRecords(System.Collections.Generic.IEnumerable`1<Domain.Entities.Documents.PersonalRecord>)": {
+          "Lines": {
+            "297": 0,
+            "298": 0,
+            "299": 0,
+            "300": 0
+          },
+          "Branches": [
+            {
+              "Line": 299,
+              "Offset": 14,
+              "EndOffset": 18,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 299,
+              "Offset": 14,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "Domain.Entities.Request Domain.Entities.Request::ChangePaymentMethod(Domain.Entities.Lookups.PaymentMethod)": {
+          "Lines": {
+            "303": 1,
+            "304": 1,
+            "305": 1,
+            "306": 1
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Request::GetDocsCount()": {
+          "Lines": {
+            "309": 0,
+            "310": 0,
+            "311": 0,
+            "312": 0,
+            "313": 0,
+            "314": 0,
+            "315": 0,
+            "316": 0,
+            "317": 0,
+            "318": 0,
+            "319": 0,
+            "320": 0,
+            "321": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::.ctor()": {
+          "Lines": {
+            "32": 17,
+            "33": 17,
+            "34": 17,
+            "35": 17,
+            "36": 17,
+            "37": 17,
+            "38": 17,
+            "39": 17,
+            "40": 17,
+            "41": 17,
+            "42": 17,
+            "43": 17,
+            "44": 17,
+            "120": 0,
+            "121": 0,
+            "122": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::.ctor(System.String,Domain.ValueObjects.RequesterName,System.String,Domain.Entities.Lookups.Gender,Domain.ValueObjects.NID,Domain.ValueObjects.ContactDetails,Domain.Entities.Address,Domain.Entities.Address,Domain.Entities.Lookups.PaymentMethod,Domain.Entities.Lookups.Issuer)": {
+          "Lines": {
+            "123": 17,
+            "124": 17,
+            "125": 17,
+            "126": 17,
+            "127": 17,
+            "128": 17,
+            "129": 17,
+            "130": 17,
+            "131": 17,
+            "132": 17,
+            "133": 17,
+            "134": 17,
+            "135": 17,
+            "136": 17
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Request::.ctor(System.String,Domain.ValueObjects.RequesterName,System.String,System.Int32,System.String,Domain.ValueObjects.ContactDetails,Domain.Entities.Address,Domain.Entities.Address,System.Int32,System.Int32)": {
+          "Lines": {
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\RequestEFinance.cs": {
+      "Domain.Entities.RequestEFinance": {
+        "Domain.Entities.RequestState Domain.Entities.RequestEFinance::get_RequestState()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_SenderId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_SenderName()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_SenderRandomValue()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_SenderPassword()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_SenderRequestNumber()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_PaymentRequestNumber()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Decimal> Domain.Entities.RequestEFinance::get_PaymentRequestTotalAmount()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Decimal> Domain.Entities.RequestEFinance::get_CollectionFeesAmount()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Decimal> Domain.Entities.RequestEFinance::get_CustomerAuthorizationAmount()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestEFinance::get_AuthorizingMechanism()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Entities.RequestEFinance::get_AuthoriztionDateTime()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Entities.RequestEFinance::get_ReconciliationDate()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Boolean> Domain.Entities.RequestEFinance::get_IsConfirmed()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\RequestFawry.cs": {
+      "Domain.Entities.RequestFawry": {
+        "Domain.Entities.RequestState Domain.Entities.RequestFawry::get_RequestState()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestFawry::get_FawryRefNo()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestFawry::get_FawryPaymentMethod()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestFawry::get_OrderStatusId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.OrderStatus Domain.Entities.RequestFawry::get_OrderStatus()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Decimal> Domain.Entities.RequestFawry::get_OrderAmount()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestFawry::get_MessageSignature()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestFawry::get_Notes()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\RequestPostal.cs": {
+      "Domain.Entities.RequestPostal": {
+        "Domain.Entities.RequestState Domain.Entities.RequestPostal::get_RequestState()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestPostal::get_Message()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestPostal::get_ItemCode()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestPostal::get_ErrorCode()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\RequestState.cs": {
+      "Domain.Entities.RequestState": {
+        "System.Int32 Domain.Entities.RequestState::get_RequestId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Request Domain.Entities.RequestState::get_Request()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.RequestState::get_StateId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.State Domain.Entities.RequestState::get_State()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestState::get_RejectionReasonId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.RejectionReason Domain.Entities.RequestState::get_RejectionReason()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestState::get_ReturnReasonId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.ReturnReason Domain.Entities.RequestState::get_ReturnReason()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestState::get_RequestFawryId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.RequestFawry Domain.Entities.RequestState::get_RequestFawry()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestState::get_RequestEFinanceId()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.RequestEFinance Domain.Entities.RequestState::get_RequestEFinance()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.RequestState::get_RequestPostalId()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.RequestPostal Domain.Entities.RequestState::get_RequestPostal()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.RequestState::get_IPAddress()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.RequestState::get_InsertedDate()": {
+          "Lines": {
+            "26": 2
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.DateTime> Domain.Entities.RequestState::get_LastEditDate()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Security\\Role.cs": {
+      "Domain.Entities.Security.Role": {
+        "System.String Domain.Entities.Security.Role::get_Name()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IList`1<Domain.Entities.Security.UserRole> Domain.Entities.Security.Role::get_UsersRole()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Security\\User.cs": {
+      "Domain.Entities.Security.User": {
+        "System.String Domain.Entities.Security.User::get_Email()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Security.User::get_Password()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IList`1<Domain.Entities.Security.UserRole> Domain.Entities.Security.User::get_UserRoles()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Security\\UserRole.cs": {
+      "Domain.Entities.Security.UserRole": {
+        "System.Int32 Domain.Entities.Security.UserRole::get_UserId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Security.User Domain.Entities.Security.UserRole::get_User()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Security.UserRole::get_RoleId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Security.Role Domain.Entities.Security.UserRole::get_Role()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Country.cs": {
+      "Domain.Entities.Lookups.Country": {
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.Country::get_RegionId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Region Domain.Entities.Lookups.Country::get_Region()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.Country::get_SortOrder()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\DocumentType.cs": {
+      "Domain.Entities.Lookups.DocumentType": {
+        "System.Int32 Domain.Entities.Lookups.DocumentType::get_MaxCopies()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Decimal Domain.Entities.Lookups.DocumentType::get_Price()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.DocumentType::get_MaxBeneficiaries()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.Lookups.DocumentType::get_CanBeBundled()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.Lookups.DocumentType::get_IsInstantApproval()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Lookups.DocumentType::get_Agreement()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.DocumentType::get_IssuerId()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Issuer Domain.Entities.Lookups.DocumentType::get_Issuer()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.DocumentTypeRelation> Domain.Entities.Lookups.DocumentType::get_Relations()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.Regulation> Domain.Entities.Lookups.DocumentType::get_Regulations()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.DocumentType::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\DocumentTypeRelation.cs": {
+      "Domain.Entities.Lookups.DocumentTypeRelation": {
+        "System.Int32 Domain.Entities.Lookups.DocumentTypeRelation::get_DocumentTypeId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.DocumentType Domain.Entities.Lookups.DocumentTypeRelation::get_DocumentType()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.DocumentTypeRelation::get_RelationId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Lookups.DocumentTypeRelation::get_Relation()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.DocumentTypeRelation::get_GenderId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Gender Domain.Entities.Lookups.DocumentTypeRelation::get_Gender()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\GovernmentalEstablishment.cs": {
+      "Domain.Entities.Lookups.GovernmentalEstablishment": {
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.GovernmentalEstablishment::get_GovernmentalEstablishmentTypeId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.GovernmentalEstablishmentType Domain.Entities.Lookups.GovernmentalEstablishment::get_GovernmentalEstablishmentType()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\GovernmentalEstablishmentType.cs": {
+      "Domain.Entities.Lookups.GovernmentalEstablishmentType": {
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.GovernmentalEstablishment> Domain.Entities.Lookups.GovernmentalEstablishmentType::get_GovernmentalEstablishments()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.GovernmentalEstablishmentType::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Governorate.cs": {
+      "Domain.Entities.Lookups.Governorate": {
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.Governorate::get_PostDeliveryDays()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.Unit> Domain.Entities.Lookups.Governorate::get_Units()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.PoliceDepartment> Domain.Entities.Lookups.Governorate::get_PoliceDepartments()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.PostalCode> Domain.Entities.Lookups.Governorate::get_PostalCodes()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.Governorate::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Issuer.cs": {
+      "Domain.Entities.Lookups.Issuer": {
+        "System.Int32 Domain.Entities.Lookups.Issuer::get_PackageExpiryInHours()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Lookups.Issuer::get_PackageDescription()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Lookups.Issuer::get_Phone()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.Issuer::get_ReplyPeriod()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Lookups.Issuer::get_HomePageUrl()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Request> Domain.Entities.Lookups.Issuer::get_Requests()": {
+          "Lines": {
+            "16": 17
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.Issuer::.ctor()": {
+          "Lines": {
+            "7": 17,
+            "8": 17,
+            "9": 17,
+            "10": 17
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\PoliceDepartment.cs": {
+      "Domain.Entities.Lookups.PoliceDepartment": {
+        "System.Int32 Domain.Entities.Lookups.PoliceDepartment::get_GovernorateId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Governorate Domain.Entities.Lookups.PoliceDepartment::get_Governorate()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\PostalCode.cs": {
+      "Domain.Entities.Lookups.PostalCode": {
+        "System.String Domain.Entities.Lookups.PostalCode::get_Address()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.PostalCode::get_PoliceDepartmentId()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.PoliceDepartment Domain.Entities.Lookups.PostalCode::get_PoliceDepartment()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.PostalCode::get_GovernorateId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Governorate Domain.Entities.Lookups.PostalCode::get_Governorate()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Qualification.cs": {
+      "Domain.Entities.Lookups.Qualification": {
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.Qualification::get_QualificationTypeId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.QualificationType Domain.Entities.Lookups.Qualification::get_QualificationType()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\QualificationType.cs": {
+      "Domain.Entities.Lookups.QualificationType": {
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.Qualification> Domain.Entities.Lookups.QualificationType::get_Qualifications()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.QualificationType::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Region.cs": {
+      "Domain.Entities.Lookups.Region": {
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.Country> Domain.Entities.Lookups.Region::get_Countries()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.Region::.ctor()": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Regulation.cs": {
+      "Domain.Entities.Lookups.Regulation": {
+        "System.Int32 Domain.Entities.Lookups.Regulation::get_DocumentTypeId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.DocumentType Domain.Entities.Lookups.Regulation::get_DocumentType()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Lookups.Regulation::get_JobTypeNIDId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.JobTypeNID Domain.Entities.Lookups.Regulation::get_JobTypeNID()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Lookups.Regulation::get_Regulations()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Relation.cs": {
+      "Domain.Entities.Lookups.Relation": {
+        "System.Collections.Generic.ICollection`1<Domain.Entities.Lookups.DocumentTypeRelation> Domain.Entities.Lookups.Relation::get_DocumentTypeRelations()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void Domain.Entities.Lookups.Relation::.ctor()": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Lookups\\Unit.cs": {
+      "Domain.Entities.Lookups.Unit": {
+        "System.String Domain.Entities.Lookups.Unit::get_Address()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Lookups.Unit::get_GovernorateId()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Governorate Domain.Entities.Lookups.Unit::get_Governorate()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\BirthDoc.cs": {
+      "Domain.Entities.Documents.BirthDoc": {
+        "System.Int32 Domain.Entities.Documents.BirthDoc::get_GenderId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Gender Domain.Entities.Documents.BirthDoc::get_Gender()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.NID Domain.Entities.Documents.BirthDoc::get_NID()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.RequesterName Domain.Entities.Documents.BirthDoc::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.BirthDoc::get_MotherFullName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.BirthDoc::get_RelationId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Documents.BirthDoc::get_Relation()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.Documents.BirthDoc::get_IsFirstTime()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\CriminalStateRecord.cs": {
+      "Domain.Entities.Documents.CriminalStateRecord": {
+        "System.String Domain.Entities.Documents.CriminalStateRecord::get_IssueDestination()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\DeathDoc.cs": {
+      "Domain.Entities.Documents.DeathDoc": {
+        "System.Int32 Domain.Entities.Documents.DeathDoc::get_GenderId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Gender Domain.Entities.Documents.DeathDoc::get_Gender()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.NID Domain.Entities.Documents.DeathDoc::get_NID()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.RequesterName Domain.Entities.Documents.DeathDoc::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.DeathDoc::get_MotherFullName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.DeathDoc::get_RelationId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Documents.DeathDoc::get_Relation()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\DivorceDoc.cs": {
+      "Domain.Entities.Documents.DivorceDoc": {
+        "Domain.ValueObjects.RequesterName Domain.Entities.Documents.DivorceDoc::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.NID Domain.Entities.Documents.DivorceDoc::get_NID()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.DivorceDoc::get_SpouseFullName()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.DivorceDoc::get_RelationId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Documents.DivorceDoc::get_Relation()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\FamilyRecord.cs": {
+      "Domain.Entities.Documents.FamilyRecord": {
+        "System.Int32 Domain.Entities.Documents.FamilyRecord::get_GenderId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Gender Domain.Entities.Documents.FamilyRecord::get_Gender()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_NID()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_FirstName()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_FatherName()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_GrandFatherName()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_FamilyName()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.FamilyRecord::get_MotherFullName()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.FamilyRecord::get_RelationId()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Documents.FamilyRecord::get_Relation()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\MarriageDoc.cs": {
+      "Domain.Entities.Documents.MarriageDoc": {
+        "Domain.ValueObjects.RequesterName Domain.Entities.Documents.MarriageDoc::get_Name()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Domain.ValueObjects.NID Domain.Entities.Documents.MarriageDoc::get_NID()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.MarriageDoc::get_SpouseFullName()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.MarriageDoc::get_RelationId()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Relation Domain.Entities.Documents.MarriageDoc::get_Relation()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\NidDoc.cs": {
+      "Domain.Entities.Documents.NidDoc": {
+        "Domain.ValueObjects.RequesterName Domain.Entities.Documents.NidDoc::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.NidDoc::get_NidIssueReasonId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.NidIssueReason Domain.Entities.Documents.NidDoc::get_NidIssueReason()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.NidDoc::get_JobTypeNIDId()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.JobTypeNID Domain.Entities.Documents.NidDoc::get_JobTypeNID()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.NidDoc::get_JobName()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Entities.Documents.NidDoc::get_IsFirstTime()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\WorkPermit.cs": {
+      "Domain.Entities.Documents.WorkPermit": {
+        "System.Int32 Domain.Entities.Documents.WorkPermit::get_BirthPlaceId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Country Domain.Entities.Documents.WorkPermit::get_BirthPlace()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.WorkPermit::get_QualificationId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Qualification Domain.Entities.Documents.WorkPermit::get_Qualification()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Documents.WorkPermit::get_QualificationDate()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.WorkPermit::get_JobTypeWorkPermitId()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.JobTypeWorkPermit Domain.Entities.Documents.WorkPermit::get_JobTypeWorkPermit()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_JobNameInEgypt()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.WorkPermit::get_WorkPermitIssueReasonId()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.WorkPermitIssueReason Domain.Entities.Documents.WorkPermit::get_WorkPermitIssueReason()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.WorkPermit::get_PassportId()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Passport Domain.Entities.Documents.WorkPermit::get_Passport()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Documents.WorkPermit::get_ForeignContractorId()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.ForeignContractor Domain.Entities.Documents.WorkPermit::get_ForeignContractor()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Documents.WorkPermit::get_PublicSectorId()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.PublicSector Domain.Entities.Documents.WorkPermit::get_PublicSector()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_NidFileName()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_PassportFileName()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_PreviousPermitFileName()": {
+          "Lines": {
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_VisaFileName()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_VacationPermitFileName()": {
+          "Lines": {
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_NavyAgentCertFileName()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermit::get_NavyPassportFileName()": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\WorkPermitClearance.cs": {
+      "Domain.Entities.Documents.WorkPermitClearance": {
+        "System.Int32 Domain.Entities.Documents.WorkPermitClearance::get_PassportId()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Passport Domain.Entities.Documents.WorkPermitClearance::get_Passport()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime Domain.Entities.Documents.WorkPermitClearance::get_LastPermitFinishDate()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_ClearanceDestination()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Entities.Documents.WorkPermitClearance::get_ClearanceReasonId()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.ClearanceReason Domain.Entities.Documents.WorkPermitClearance::get_ClearanceReason()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_NidFileName()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_PassportFileName()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_PreviousPermitFileName()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_VisaFileName()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_RenewDirectedLetterFileName()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Entities.Documents.WorkPermitClearance::get_NavyAgentCertFileName()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Private\\MOIS\\Domain\\Entities\\Documents\\WorkPermitReplace.cs": {
+      "Domain.Entities.Documents.WorkPermitReplace": {
+        "System.Nullable`1<System.Int32> Domain.Entities.Documents.WorkPermitReplace::get_IssuingGovernorateId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Governorate Domain.Entities.Documents.WorkPermitReplace::get_IssuingGovernorate()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Nullable`1<System.Int32> Domain.Entities.Documents.WorkPermitReplace::get_IssuingUnitId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "Domain.Entities.Lookups.Unit Domain.Entities.Documents.WorkPermitReplace::get_IssuingUnit()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
