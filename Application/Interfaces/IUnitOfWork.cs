@@ -9,7 +9,7 @@ namespace Application.Interfaces
         //IRepository<TEntity> GetRepository<TEntity>(bool hasCustomRepository = false) where TEntity : class;
         int CommitChanges();
         Task<int> CommitChangesAsync();
-        int ExecuteSqlCommand(string sql, params object[] parameters);
+        Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters);
         IQueryable<TEntity> FromSql<TEntity>(string sql, params object[] parameters) where TEntity : class;
     }
 }

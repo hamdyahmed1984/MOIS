@@ -4,10 +4,7 @@ namespace Domain.Entities.Lookups
 {
     public class Issuer : LookupBase
     {
-        public Issuer()
-        {
-            Requests = new HashSet<Request>();
-        }
+        public Issuer() => Requests = new HashSet<Request>();
         public int PackageExpiryInHours { get; set; }
         public string PackageDescription { get; set; }
         public string Phone { get; set; }

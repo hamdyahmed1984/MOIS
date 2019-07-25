@@ -6,10 +6,7 @@ namespace Domain.Entities.Lookups
 {
     public class Relation : LookupBase
     {
-        public Relation()
-        {
-            DocumentTypeRelations = new HashSet<DocumentTypeRelation>();
-        }
+        public Relation() => DocumentTypeRelations = new HashSet<DocumentTypeRelation>();
         public ICollection<DocumentTypeRelation> DocumentTypeRelations { get; private set; }
     }
 }

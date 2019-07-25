@@ -12,10 +12,7 @@ namespace ClientApp.HealthChecks
     public class ApiHealthCheck : IHealthCheck
     {
         private readonly ICachedLookupsService _cachedLookupsService;
-        public ApiHealthCheck(ICachedLookupsService cachedLookupsService)
-        {
-            _cachedLookupsService = cachedLookupsService;
-        }
+        public ApiHealthCheck(ICachedLookupsService cachedLookupsService) => _cachedLookupsService = cachedLookupsService;
 
         public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default(CancellationToken))
         {

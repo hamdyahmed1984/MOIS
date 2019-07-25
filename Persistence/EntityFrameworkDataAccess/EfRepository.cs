@@ -154,7 +154,7 @@ namespace Persistence.EntityFrameworkDataAccess
         public virtual Task<TEntity> FindAsync(object[] keyValues, CancellationToken cancellationToken) => _dbSet.FindAsync(keyValues, cancellationToken);
 
         /// <returns></returns>
-        public virtual int Count(Expression<Func<TEntity, bool>> predicate = null) => predicate == null ? _dbSet.Count() : _dbSet.Count(predicate);
+        public virtual async Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate = null) => predicate == null ? await _dbSet.CountAsync() : await _dbSet.CountAsync(predicate);
         
         public virtual void Insert(TEntity entity)=> _dbSet.Add(entity);
 
@@ -178,7 +178,7 @@ namespace Persistence.EntityFrameworkDataAccess
 
         public virtual void Delete(TEntity entity) => _dbSet.Remove(entity);
 
-        public virtual void Delete(object id)
+        public virtual async Task DeleteAsync(object id)
         {
             // using a stub entity to mark for deletion
             var typeInfo = typeof(TEntity).GetTypeInfo();
@@ -192,7 +192,7 @@ namespace Persistence.EntityFrameworkDataAccess
             }
             else
             {
-                var entity = _dbSet.Find(id);
+                var entity = await _dbSet.FindAsync(id);
                 if (entity != null)
                 {
                     Delete(entity);

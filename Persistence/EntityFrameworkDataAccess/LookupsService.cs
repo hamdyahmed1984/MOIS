@@ -14,11 +14,8 @@ namespace Persistence.EntityFrameworkDataAccess
 {
     public class LookupsService : ILookupsService
     {
-        protected readonly MoisContext _dbContext;        
-        public LookupsService(MoisContext dbContext)
-        {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-        }
+        protected readonly MoisContext _dbContext;
+        public LookupsService(MoisContext dbContext) => _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
 
         public async Task<IEnumerable<T>> GetLookups<T>() where T : class => await _dbContext.Set<T>().AsNoTracking().ToListAsync();
 

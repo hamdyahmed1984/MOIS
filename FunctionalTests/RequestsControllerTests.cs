@@ -11,10 +11,7 @@ namespace FunctionalTests
 {
     public class RequestsControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public RequestsControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public RequestsControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
 
         const string MOTHER_FULL_NAME = "Fatema";
 

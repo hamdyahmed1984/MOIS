@@ -12,10 +12,7 @@ namespace FunctionalTests
 {
     public class AuthControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public AuthControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public AuthControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
 
         private const string EMAIL = "admin@admin.com";
         private const string PASSWORD = "12345678";

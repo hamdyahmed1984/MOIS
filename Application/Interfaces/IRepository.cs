@@ -73,7 +73,7 @@ namespace Application.Interfaces
 
         Task<IList<TEntity>> GetAllAsync();
         
-        int Count(Expression<Func<TEntity, bool>> predicate = null);
+        Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate = null);
         
         void Insert(TEntity entity);
         
@@ -93,7 +93,7 @@ namespace Application.Interfaces
         
         void Update(IEnumerable<TEntity> entities);
         
-        void Delete(object id);
+        Task DeleteAsync(object id);
         
         void Delete(TEntity entity);
         

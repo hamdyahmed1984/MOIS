@@ -7,8 +7,7 @@ namespace ClientApp.Validation
 {
     public class NIDResourceValidator : AbstractValidator<NIDResource>
     {
-        public NIDResourceValidator()
-        {
+        public NIDResourceValidator() =>
             //We should have these validation rules in order or we will get an exception in the constructor of NID in case the NId is invalid
             //And we have to set CascadeMode.StopOnFirstFailure
             RuleFor(nid => nid.NationalIdenNumber)
@@ -17,6 +16,5 @@ namespace ClientApp.Validation
                 .Length(14)
                 .Matches(@"^\d{14}$")
                 .Must(nid => new NID(nid).IsNidValid());
-        }
     }
 }

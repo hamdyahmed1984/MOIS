@@ -61,7 +61,7 @@ namespace FunctionalTests
                     try
                     {
                         //Seed data
-                        DatabaseSeed.Seed(db, passwordHasher);
+                        DatabaseSeed.SeedAsync(db, passwordHasher);
                     }
                     catch(Exception ex)
                     {

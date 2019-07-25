@@ -12,10 +12,7 @@ namespace Persistence.EntityFrameworkDataAccess.Repositories
     {
         private readonly MoisContext _dbContext;
 
-        public UserRepository(MoisContext dbContext)
-        {
-            _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
-        }
+        public UserRepository(MoisContext dbContext) => _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
 
         public IUnitOfWork UnitOfWork => _dbContext;
 

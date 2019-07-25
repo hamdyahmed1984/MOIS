@@ -11,10 +11,7 @@ namespace FunctionalTests
 {
     public class MarriageDocControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public MarriageDocControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public MarriageDocControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
 
         private const decimal DocPrice = 59;
 

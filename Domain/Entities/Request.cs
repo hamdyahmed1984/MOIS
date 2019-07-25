@@ -46,75 +46,70 @@ namespace Domain.Entities
         //Readonly collections to wrap the original collections
         public IReadOnlyCollection<WorkPermitRenew> WorkPermitRenews
         {
-            get { return _workPermitRenews.AsReadOnly(); }
-            set { AddWorkPermitRenews(value); }
+            get => _workPermitRenews.AsReadOnly();
+            set => AddWorkPermitRenews(value);
         }
         public IReadOnlyCollection<WorkPermitReplace> WorkPermitReplaces
         {
-            get { return _workPermitReplaces.AsReadOnly(); }
-            set { AddWorkPermitReplaces(value); }
+            get => _workPermitReplaces.AsReadOnly();
+            set => AddWorkPermitReplaces(value);
         }
         public IReadOnlyCollection<WorkPermitClearance> WorkPermitClearances
         {
-            get { return _workPermitClearances.AsReadOnly(); }
-            set { AddWorkPermitClearances(value); }
+            get => _workPermitClearances.AsReadOnly();
+            set => AddWorkPermitClearances(value);
         }
         public IReadOnlyCollection<CriminalStateRecord> CriminalStateRecords
         {
-            get { return _criminalStateRecords.AsReadOnly(); }
-            set { AddCriminalStateRecords(value); }
+            get => _criminalStateRecords.AsReadOnly();
+            set => AddCriminalStateRecords(value);
         }
         public IReadOnlyCollection<BirthDoc> BirthDocs
         {
-            get
-            {
-                return _birthDocs.AsReadOnly();
-            }
-            set
-            {
+            get => _birthDocs.AsReadOnly();
+            set =>
                 //We made the set to add items to the readonly collection through a method so we controlled our business object from outside changes
                 AddBirthDocs(value);
-            }
         }
         public IReadOnlyCollection<DeathDoc> DeathDocs
         {
-            get { return _deathDocs.AsReadOnly(); }
-            set { AddDeathDocs(value); }
+            get => _deathDocs.AsReadOnly();
+            set => AddDeathDocs(value);
         }
         public IReadOnlyCollection<DivorceDoc> DivorceDocs
         {
-            get { return _divorceDocs.AsReadOnly(); }
-            set { AddDivorceRecords(value); }
+            get => _divorceDocs.AsReadOnly();
+            set => AddDivorceRecords(value);
         }
         public IReadOnlyCollection<FamilyRecord> FamilyRecords
         {
-            get { return _familyRecords.AsReadOnly(); }
-            set { AddFamilyRecords(value); }
+            get => _familyRecords.AsReadOnly();
+            set => AddFamilyRecords(value);
         }
         public IReadOnlyCollection<MarriageDoc> MarriageDocs
         {
-            get { return _marriageDocs.AsReadOnly(); }
-            set { AddMarriageRecords(value); }
+            get => _marriageDocs.AsReadOnly();
+            set => AddMarriageRecords(value);
         }
         public IReadOnlyCollection<NidDoc> NidDoc
         {
-            get { return _nidDoc.AsReadOnly(); }
-            set { AddNidDocs(value); }
+            get => _nidDoc.AsReadOnly();
+            set => AddNidDocs(value);
         }
         public IReadOnlyCollection<PersonalRecord> PersonalRecords
         {
-            get { return _personalRecords.AsReadOnly(); }
-            set { AddPersonalRecords(value); }
+            get => _personalRecords.AsReadOnly();
+            set => AddPersonalRecords(value);
         }
         public IReadOnlyCollection<RequestState> RequestStates
         {
-            get { return _requestStates.AsReadOnly(); }
-            set { AddRequestStates(value); }
+            get => _requestStates.AsReadOnly();
+            set => AddRequestStates(value);
         }
         public IReadOnlyCollection<PaymentDetails> PaymentDetails
         {
-            get { return _paymentDetails.AsReadOnly(); }
-            set { AddPaymentDetails(value); }
+            get => _paymentDetails.AsReadOnly();
+            set => AddPaymentDetails(value);
         }
 
         private Request()

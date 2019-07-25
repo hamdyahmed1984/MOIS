@@ -17,7 +17,7 @@ namespace Application.Security.Hashing
             byte[] buffer2;
             if (string.IsNullOrWhiteSpace(password))
             {
-                throw new ArgumentNullException("password");
+                throw new ArgumentNullException(nameof(password));
             }
             using (Rfc2898DeriveBytes bytes = new Rfc2898DeriveBytes(password, 0x10, 0x3e8))
             {
@@ -39,7 +39,7 @@ namespace Application.Security.Hashing
             }
             if (providedPassword == null)
             {
-                throw new ArgumentNullException("providedPassword");
+                throw new ArgumentNullException(nameof(passwordHash));
             }
             byte[] src = Convert.FromBase64String(passwordHash);
             if ((src.Length != 0x31) || (src[0] != 0))

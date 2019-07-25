@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Persistence.EntityFrameworkDataAccess
 {
@@ -16,7 +17,7 @@ namespace Persistence.EntityFrameworkDataAccess
     /// </summary>
     public class DatabaseSeed
     {
-        public static void Seed(MoisContext context, IPasswordHasher passwordHasher)
+        public static async Task SeedAsync(MoisContext context, IPasswordHasher passwordHasher)
         {
             /*
              This approach isn't for everyone. While it's great for apps with a local database, 
@@ -25,38 +26,38 @@ namespace Persistence.EntityFrameworkDataAccess
              EnsureCreated() bypasses Migrations to create the schema, which causes Migrate() to fail.
              */
 
-            context.Database.EnsureCreated();
+            await context.Database.EnsureCreatedAsync();
             //context.Database.Migrate();
 
-            SeedRoles(context);
+            await SeedRolesAsync(context);
 
-            SeedUsers(context, passwordHasher);
+            await SeedUsersAsync(context, passwordHasher);
 
-            SeedGenders(context);
+            await SeedGendersAsync(context);
 
-            SeedPaymentMethods(context);
+            await SeedPaymentMethodsAsync(context);
 
-            SeedStates(context);
+            await SeedStatesAsync(context);
 
-            SeedIssuers(context);
+            await SeedIssuersAsync(context);
 
-            SeedDocTypes(context);
+            await SeedDocTypesAsync(context);
 
-            SeedNidIssuingReasong(context);
+            await SeedNidIssuingReasongAsync(context);
 
-            SeedNidJobTypes(context);
+            await SeedNidJobTypesAsync(context);
 
-            SeedRelations(context);
-            SeedDocumentsRelations(context);
+            await SeedRelationsAsync(context);
+            await SeedDocumentsRelationsAsync(context);
 
-            SeedGovernorates(context);
-            SeedPoliceDepartments(context);
-            SeedPostalCodes(context);
+            await SeedGovernoratesAsync(context);
+            await SeedPoliceDepartmentsAsync(context);
+            await SeedPostalCodes(context);
         }
 
-        private static void SeedNidJobTypes(MoisContext context)
+        private static async Task SeedNidJobTypesAsync(MoisContext context)
         {
-            if (context.JobTypeNIDs.Count() == 0)
+            if (await context.JobTypeNIDs.CountAsync() == 0)
             {
                 var jobTypes = new List<JobTypeNID>
                 {
@@ -73,13 +74,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new JobTypeNID{ Code = "MILITARY", Name = "ضباط الجيش والشرطة والقضاء والعاملين بالبنوك"}
                 };
                 context.JobTypeNIDs.AddRange(jobTypes);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedNidIssuingReasong(MoisContext context)
+        private static async Task SeedNidIssuingReasongAsync(MoisContext context)
         {
-            if(context.NidIssueReasons.Count() == 0)
+            if(await context.NidIssueReasons.CountAsync() == 0)
             {
                 var reasons = new List<NidIssueReason>
                 {
@@ -90,13 +91,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new NidIssueReason{ Code = "LOST", Name = "بدل فاقد"}
                 };
                 context.NidIssueReasons.AddRange(reasons);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedIssuers(MoisContext context)
+        private static async Task SeedIssuersAsync(MoisContext context)
         {
-            if (context.Issuers.Count() == 0)
+            if (await context.Issuers.CountAsync() == 0)
             {
                 var issuers = new List<Issuer>
                     {
@@ -105,13 +106,13 @@ namespace Persistence.EntityFrameworkDataAccess
                         new Issuer(){Code = "MOI-WP", Name = "تصاريح العمل", PackageExpiryInHours = 1680, PackageDescription = "تصاريح العمل", Phone = "12345", ReplyPeriod = 72, HomePageUrl = "http://WPO.moi.gov.eg" }
                     };
                 context.Issuers.AddRange(issuers);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedOrderStatuses(MoisContext context)
+        private static async Task SeedOrderStatusesAsync(MoisContext context)
         {
-            if (context.OrderStatuses.Count() == 0)
+            if (await context.OrderStatuses.CountAsync() == 0)
             {
 
                 var orderStatuses = new List<OrderStatus>
@@ -125,13 +126,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.OrderStatuses.AddRange(orderStatuses);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedGenders(MoisContext context)
+        private static async Task SeedGendersAsync(MoisContext context)
         {
-            if (context.Genders.Count() == 0)
+            if (await context.Genders.CountAsync() == 0)
             {
 
                 var genders = new List<Gender>
@@ -141,13 +142,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.Genders.AddRange(genders);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedPaymentMethods(MoisContext context)
+        private static async Task SeedPaymentMethodsAsync(MoisContext context)
         {
-            if (context.PaymentMethods.Count() == 0)
+            if (await context.PaymentMethods.CountAsync() == 0)
             {
 
                 var paymentMethods = new List<PaymentMethod>
@@ -157,13 +158,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.PaymentMethods.AddRange(paymentMethods);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedRelations(MoisContext context)
+        private static async Task SeedRelationsAsync(MoisContext context)
         {
-            if (context.Relations.Count() == 0)
+            if (await context.Relations.CountAsync() == 0)
             {
                 var relations = new List<Relation>
                 {
@@ -182,17 +183,17 @@ namespace Persistence.EntityFrameworkDataAccess
                     new Relation(){ Code = "WIFE", Name = "زوجة مقدم الطلب" }
                 };
                 context.Relations.AddRange(relations);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedDocumentsRelations(MoisContext context)
+        private static async Task SeedDocumentsRelationsAsync(MoisContext context)
         {
-            if (context.DocumentTypeRelations.Count() == 0)
+            if (await context.DocumentTypeRelations.CountAsync() == 0)
             {
-                var docTypes = context.DocumentTypes.ToList();
-                var relations = context.Relations.ToList();
-                var genders = context.Genders.ToList();
+                var docTypes = await context.DocumentTypes.ToListAsync();
+                var relations = await context.Relations.ToListAsync();
+                var genders = await context.Genders.ToListAsync();
                 var docTypesRelations = new List<DocumentTypeRelation>
                 {
                     //Birth Doc
@@ -278,44 +279,44 @@ namespace Persistence.EntityFrameworkDataAccess
                     new DocumentTypeRelation{ DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, RelationId = relations.First(a => a.Code == "SELF").Id, GenderId = genders.First(a => a.Code == "F").Id},
                 };
                 context.DocumentTypeRelations.AddRange(docTypesRelations);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedDocTypes(MoisContext context)
+        private static async Task SeedDocTypesAsync(MoisContext context)
         {
-            if (context.DocumentTypes.Count() == 0)
+            if (await context.DocumentTypes.CountAsync() == 0)
             {
                 var docTypes = new List<DocumentType>
                 {
-                    new DocumentType(){Code = "CSR", Name = "صحيفة الحالة الجنائية", MaxCopies = 1, Price = 60, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSR").Id },
-                    new DocumentType(){Code = "CR", Name = "طلب مخالصة", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-WP").Id },
-                    new DocumentType(){Code = "WP", Name = "تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-WP").Id },
-                    new DocumentType(){Code = "WPL", Name = @"بدل فاقد\تالف تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-WP").Id },
-                    new DocumentType(){Code = "MOICSO001", Name = "وثيقة ميلاد", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO002", Name = "بطاقة رقم قومى بدل فاقد/تالف", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO003", Name = "وثيقة زواج", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO004", Name = "وثيقة طلاق", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO005", Name = "قيد وفاة", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO006", Name = "قيد عائلى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO007", Name = "قيد فردى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO008", Name = "إعادة تصوير بطاقة رقم قومى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO009", Name = "بطاقة رقم قومى أول مرة", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO013", Name = "وثيقة ميلاد اول مرة", MaxCopies = 20, Price = 71, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO111", Name = "استمارة رقم قومي مستعجلة", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO112", Name = "استمارة رقم قومي عادية", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO113", Name = "استمارة رقم قومي شاملة التصوير المنزلى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO141", Name = "بطاقة رقم قومى أول مرة لكبار السن والمرضى", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id },
-                    new DocumentType(){Code = "MOICSO142", Name = "بطاقة رقم قومى أول مرة لذوى الاحتياجات الخاصة", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = context.Issuers.First(a => a.Code == "MOI-CSO").Id }
+                    new DocumentType(){Code = "CSR", Name = "صحيفة الحالة الجنائية", MaxCopies = 1, Price = 60, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSR")).Id },
+                    new DocumentType(){Code = "CR", Name = "طلب مخالصة", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "WP", Name = "تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "WPL", Name = @"بدل فاقد\تالف تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "MOICSO001", Name = "وثيقة ميلاد", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO002", Name = "بطاقة رقم قومى بدل فاقد/تالف", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO003", Name = "وثيقة زواج", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO004", Name = "وثيقة طلاق", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO005", Name = "قيد وفاة", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO006", Name = "قيد عائلى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO007", Name = "قيد فردى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO008", Name = "إعادة تصوير بطاقة رقم قومى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO009", Name = "بطاقة رقم قومى أول مرة", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO013", Name = "وثيقة ميلاد اول مرة", MaxCopies = 20, Price = 71, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO111", Name = "استمارة رقم قومي مستعجلة", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO112", Name = "استمارة رقم قومي عادية", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO113", Name = "استمارة رقم قومي شاملة التصوير المنزلى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO141", Name = "بطاقة رقم قومى أول مرة لكبار السن والمرضى", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO142", Name = "بطاقة رقم قومى أول مرة لذوى الاحتياجات الخاصة", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id }
                 };
                 context.DocumentTypes.AddRange(docTypes);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedStates(MoisContext context)
+        private static async Task SeedStatesAsync(MoisContext context)
         {
-            if (context.States.Count() == 0)
+            if (await context.States.CountAsync() == 0)
             {
                 var states = new List<State>
                 {
@@ -340,13 +341,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new State(){ Code = "REFUNDING", Name = "جاري الإسترداد" }
                 };
                 context.States.AddRange(states);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedUsers(MoisContext context, IPasswordHasher passwordHasher)
+        private static async Task SeedUsersAsync(MoisContext context, IPasswordHasher passwordHasher)
         {
-            if (context.Users.Count() == 0)
+            if (await context.Users.CountAsync() == 0)
             {
                 var users = new List<User>
                 {
@@ -356,22 +357,22 @@ namespace Persistence.EntityFrameworkDataAccess
 
                 users[0].UserRoles.Add(new UserRole
                 {
-                    RoleId = context.Roles.SingleOrDefault(r => r.Name == ERole.Administrator.ToString()).Id
+                    RoleId = (await context.Roles.SingleOrDefaultAsync(r => r.Name == ERole.Administrator.ToString())).Id
                 });
 
                 users[1].UserRoles.Add(new UserRole
                 {
-                    RoleId = context.Roles.SingleOrDefault(r => r.Name == ERole.Common.ToString()).Id
+                    RoleId = (await context.Roles.SingleOrDefaultAsync(r => r.Name == ERole.Common.ToString())).Id
                 });
 
                 context.Users.AddRange(users);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedRoles(MoisContext context)
+        private static async Task SeedRolesAsync(MoisContext context)
         {
-            if (context.Roles.Count() == 0)
+            if (await context.Roles.CountAsync() == 0)
             {
 
                 var roles = new List<Role>
@@ -381,13 +382,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.Roles.AddRange(roles);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedGovernorates(MoisContext context)
+        private static async Task SeedGovernoratesAsync(MoisContext context)
         {
-            if (context.Governorates.Count() == 0)
+            if (await context.Governorates.CountAsync() == 0)
             {
                 var govs = new List<Governorate>
                 {
@@ -420,15 +421,15 @@ namespace Persistence.EntityFrameworkDataAccess
                     new Governorate { Code = "36", Name = "الأقصر"},
                 };
                 context.Governorates.AddRange(govs);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
-
-        private static void SeedPoliceDepartments(MoisContext context)
+        
+        private static async Task SeedPoliceDepartmentsAsync(MoisContext context)
         {
-            if (context.PoliceDepartments.Count() == 0)
+            if (await context.PoliceDepartments.CountAsync() == 0)
             {
-                var govs = context.Governorates.ToList();
+                var govs = await context.Governorates.ToListAsync();
                 var policeDepts = new List<PoliceDepartment>
                 {
                     new PoliceDepartment { Code = "2", Name = "فسم المعصرة", GovernorateId= govs.First(a => a.Code == "1").Id },
@@ -805,15 +806,15 @@ namespace Persistence.EntityFrameworkDataAccess
                     new PoliceDepartment { Code = "3", Name = "مركز شرطة طيبة", GovernorateId= govs.First(a => a.Code == "36").Id },
                 };
                 context.PoliceDepartments.AddRange(policeDepts);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        private static void SeedPostalCodes(MoisContext context)
+        private static async Task SeedPostalCodes(MoisContext context)
         {
-            if (context.PostalCodes.Count() == 0)
+            if (await context.PostalCodes.CountAsync() == 0)
             {
-                var govs = context.Governorates.ToList();
+                var govs = await context.Governorates.ToListAsync();
                 var postalCodes = new List<PostalCode>
                 {
                     new PostalCode { Code = "11511", Name = "القاهرة الرئيسى", Address = "ميدان العتبة/1ش عبد الخالق ثروت", GovernorateId= govs.First(a => a.Code == "1").Id },
@@ -4783,8 +4784,8 @@ namespace Persistence.EntityFrameworkDataAccess
                     new PostalCode { Code = "85959", Name = "الاقصر محطة ( مسائى )", Address = "داخل محطة سكة حديد الاقصر", GovernorateId= govs.First(a => a.Code == "36").Id },
                 };
                 context.PostalCodes.AddRange(postalCodes);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
-        }
+        }        
     }
 }

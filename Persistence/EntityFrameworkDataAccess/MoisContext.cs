@@ -79,7 +79,7 @@ namespace Persistence.EntityFrameworkDataAccess
         public DbSet<RequestEFinance> RequestEFinances { get; set; }
         public DbSet<RequestPostal> RequestPostals { get; set; }
 
-        public int ExecuteSqlCommand(string sql, params object[] parameters) => Database.ExecuteSqlCommand(sql, parameters);
+        public async Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters) => await Database.ExecuteSqlCommandAsync(sql, parameters);
 
         public IQueryable<TEntity> FromSql<TEntity>(string sql, params object[] parameters) where TEntity : class => Set<TEntity>().FromSql(sql, parameters);
 

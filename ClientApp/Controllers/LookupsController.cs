@@ -108,8 +108,7 @@ namespace ClientApp.Controllers
         [HttpGet]
         public async Task<IEnumerable<LookupBaseResource>> GetLookups([FromHeader]string lookupsType)
         {
-            object _lookupsType;
-            bool valid = Enum.TryParse(typeof(LookupType), lookupsType, true, out _lookupsType);
+            bool valid = Enum.TryParse(typeof(LookupType), lookupsType, true, out object _lookupsType);
             if (valid)
             {
                 switch ((LookupType)_lookupsType)

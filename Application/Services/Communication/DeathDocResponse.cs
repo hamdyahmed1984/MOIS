@@ -7,9 +7,7 @@ namespace Application.Services.Communication
     {
         public DeathDoc DeathDoc { get; private set; }
         private DeathDocResponse(bool success, string message, DeathDoc deathRecord) : base(success, message)
-        {
-            DeathDoc = deathRecord;
-        }
+        => DeathDoc = deathRecord;
         public DeathDocResponse(DeathDoc deathRecord) : this(true, string.Empty, deathRecord) { }
         public DeathDocResponse(string message) : this(false, message, null) { }
     }

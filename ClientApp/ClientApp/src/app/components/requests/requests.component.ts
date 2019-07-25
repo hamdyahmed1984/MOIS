@@ -108,7 +108,7 @@ export class RequestsComponent implements OnInit {
     this.requestModel.PaymentMethodId = 2;//Consider changing this
     this.requestModel.IssuerId = 1;//Consider changing this
 
-    this.requestModel.RequesterName = this.getRequesterNameFromFormValues();
+    this.requestModel.Name = this.getRequesterNameFromFormValues();
     this.requestModel.ContactDetails = this.getContactDetailsFromFormValues();
     //this.requestModel.ResidencyAddress = this.residencyAddressModel;
     //this.requestModel.DeliveryAddress = this.requestForm.get('residencyAddressSameAsDeliveryAddress').value ?
@@ -146,10 +146,10 @@ export class RequestsComponent implements OnInit {
       issuerId: requestModel.IssuerId,
       paymentMethodId: requestModel.PaymentMethodId,
       requesterName: {
-        firstName: requestModel.RequesterName ? requestModel.RequesterName.FirstName : null,
-        fatherName: requestModel.RequesterName ? requestModel.RequesterName.FatherName : null,
-        grandFatherName: requestModel.RequesterName ? requestModel.RequesterName.GrandFatherName : null,
-        familyName: requestModel.RequesterName ? requestModel.RequesterName.FamilyName : null
+        firstName: requestModel.Name ? requestModel.Name.FirstName : null,
+        fatherName: requestModel.Name ? requestModel.Name.FatherName : null,
+        grandFatherName: requestModel.Name ? requestModel.Name.GrandFatherName : null,
+        familyName: requestModel.Name ? requestModel.Name.FamilyName : null
       },
       contactDetails: {
         email: requestModel.ContactDetails ? requestModel.ContactDetails.Email : null,

@@ -1,7 +1,7 @@
 
 export class RequestModel {
   Id: number;
-  RequesterName: RequesterNameModel;
+  Name: RequesterNameModel;
   MotherFullName: string;
   GenderId: number
   NID: NID;

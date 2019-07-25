@@ -12,10 +12,7 @@ namespace FunctionalTests
 {
     public class UsersControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public UsersControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public UsersControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
 
         private const string EMAIL = "a@a.a";
         private const string PASSWORD = "12345678";

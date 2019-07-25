@@ -23,22 +23,22 @@ export class LookupsService extends BaseService {
   }
 
   getGenders(): Observable<LookupBaseModel[]> {
-    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/get-genders')
+    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/genders')
       .pipe(catchError(super.handleError<LookupBaseModel[]>("LookupsService.getGenders")));
   }
 
   getGovernorates(): Observable<LookupBaseModel[]> {
-    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/get-govs')
+    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/govs')
       .pipe(catchError(super.handleError<LookupBaseModel[]>("LookupsService.getGovernorates")));
   }
 
   getPoliceDepartments(): Observable<PoliceDepartmentModel[]> {
-    return this.httpClient.get<PoliceDepartmentModel[]>(this.apiUrl + 'api/lookups/get-police-depts')
+    return this.httpClient.get<PoliceDepartmentModel[]>(this.apiUrl + 'api/lookups/police-depts')
       .pipe(catchError(super.handleError<PoliceDepartmentModel[]>("LookupsService.getPoliceDepartments")));
   }
 
   getPostalCodes(): Observable<PostalCodeModel[]> {
-    return this.httpClient.get<PostalCodeModel[]>(this.apiUrl + 'api/lookups/get-postal-codes')
+    return this.httpClient.get<PostalCodeModel[]>(this.apiUrl + 'api/lookups/postal-codes')
       .pipe(catchError(super.handleError<PostalCodeModel[]>("LookupsService.getPostalCodes")));
   }
 }

@@ -11,10 +11,7 @@ namespace FunctionalTests
 {
     public class NidDocControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public NidDocControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public NidDocControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
 
         private const decimal DocPrice = 155;
 

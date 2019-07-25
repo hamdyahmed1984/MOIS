@@ -7,9 +7,6 @@ namespace Application.Security.Services.Communication
     {
         public AccessToken Token { get; set; }
 
-        public TokenResponse(bool success, string message, AccessToken token) : base(success, message)
-        {
-            Token = token;
-        }
+        public TokenResponse(bool success, string message, AccessToken token) : base(success, message) => Token = token;
     }
 }

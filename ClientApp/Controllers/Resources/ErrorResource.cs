@@ -10,10 +10,7 @@ namespace ClientApp.Controllers.Resources
         public bool Success => false;
         public List<string> Messages { get; private set; }
 
-        public ErrorResource(List<string> messages)
-        {
-            this.Messages = messages ?? new List<string>();
-        }
+        public ErrorResource(List<string> messages) => this.Messages = messages ?? new List<string>();
 
         public ErrorResource(string message)
         {

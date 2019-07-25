@@ -6,9 +6,8 @@ namespace Application.Services.Communication
     {
         public BirthDoc BirthDoc { get; private set; }
         private BirthDocResponse(bool success, string message, BirthDoc birthDoc) : base(success, message)
-        {
-            BirthDoc = birthDoc;
-        }
+        => BirthDoc = birthDoc;
+
         public BirthDocResponse(BirthDoc birthDoc) : this(true, string.Empty, birthDoc) { }
         public BirthDocResponse(string message) : this(false, message, null) { }
     }

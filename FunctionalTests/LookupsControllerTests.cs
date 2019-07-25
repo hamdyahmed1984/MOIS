@@ -13,10 +13,7 @@ namespace FunctionalTests
 {
     public class LookupsControllerTests : IClassFixture<CustomWebApplicationFactory<TestingStartup>>
     {
-        public LookupsControllerTests(CustomWebApplicationFactory<TestingStartup> factory)
-        {
-            Client = factory.CreateClient();
-        }
+        public LookupsControllerTests(CustomWebApplicationFactory<TestingStartup> factory) => Client = factory.CreateClient();
         public HttpClient Client { get; }
 
         [Fact]

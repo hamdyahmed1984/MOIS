@@ -68,7 +68,7 @@ namespace Application.Tests
         public int CommitChanges() => 0;
         public Task<int> CommitChangesAsync() => Task.FromResult(0);
         public void Dispose() { }
-        public int ExecuteSqlCommand(string sql, params object[] parameters) => 0;
+        public Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters) => Task.FromResult(0);
         public IQueryable<TEntity> FromSql<TEntity>(string sql, params object[] parameters) where TEntity : class => null;
     }
 }
