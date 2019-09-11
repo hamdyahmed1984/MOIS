@@ -11,6 +11,7 @@ namespace Application.Interfaces
     public interface ILookupsService
     {
         Task<IEnumerable<T>> GetLookups<T>() where T : class;
+        Task<IEnumerable<T>> GetLookups<T>(string includeProperties) where T : class;
         Task<T> Find<T>(object keyValue) where T : class;
         Task<T> Find<T>(params object[] keyValues) where T : class;
         Task<T> FindWhere<T>(Expression<Func<T, bool>> predicate) where T : class;

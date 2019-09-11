@@ -17,7 +17,7 @@ namespace Persistence.EntityFrameworkDataAccess
     /// </summary>
     public class DatabaseSeed
     {
-        public static async Task SeedAsync(MoisContext context, IPasswordHasher passwordHasher)
+        public static void Seed(MoisContext context, IPasswordHasher passwordHasher)
         {
             /*
              This approach isn't for everyone. While it's great for apps with a local database, 
@@ -26,38 +26,84 @@ namespace Persistence.EntityFrameworkDataAccess
              EnsureCreated() bypasses Migrations to create the schema, which causes Migrate() to fail.
              */
 
-            await context.Database.EnsureCreatedAsync();
+            //context.Database.EnsureCreated();
+            context.Database.EnsureCreated();
             //context.Database.Migrate();
 
-            await SeedRolesAsync(context);
+            SeedRoles(context);
 
-            await SeedUsersAsync(context, passwordHasher);
+            SeedUsers(context, passwordHasher);
 
-            await SeedGendersAsync(context);
+            SeedGenders(context);
 
-            await SeedPaymentMethodsAsync(context);
+            SeedPaymentMethods(context);
 
-            await SeedStatesAsync(context);
+            SeedStates(context);
 
-            await SeedIssuersAsync(context);
+            SeedIssuers(context);
 
-            await SeedDocTypesAsync(context);
+            SeedDocTypes(context);
 
-            await SeedNidIssuingReasongAsync(context);
+            SeedNidIssuingReasong(context);
 
-            await SeedNidJobTypesAsync(context);
+            SeedNidJobTypes(context);
 
-            await SeedRelationsAsync(context);
-            await SeedDocumentsRelationsAsync(context);
+            SeedRelations(context);
+            SeedDocumentsRelations(context);
 
-            await SeedGovernoratesAsync(context);
-            await SeedPoliceDepartmentsAsync(context);
-            await SeedPostalCodes(context);
+            SeedDocumentTypeRegulations(context);
+
+            SeedGovernorates(context);
+            SeedPoliceDepartments(context);
+            SeedPostalCodes(context);
         }
 
-        private static async Task SeedNidJobTypesAsync(MoisContext context)
+        private static void SeedDocumentTypeRegulations(MoisContext context)
         {
-            if (await context.JobTypeNIDs.CountAsync() == 0)
+            if (context.Regulations.Count() == 0)
+            {
+                var docTypes = context.DocumentTypes.ToList();
+                var jobTypesForNid = context.JobTypeNIDs.ToList();
+                var regulations = new List<Regulation>{
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "NONE").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '>- في حالة مرور أكثر من 7 أعوام علي إصدار البطاقة السابقة يتم الاصدار ورقيا من أقرب فرع لقطاع الأحوال المدنية لمحل السكن واعتماد الطلب الورقي من محل العمل كما تم سابقا</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "QUALIFICATION").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '>- في حالة مرور أكثر من 7 أعوام علي إصدار البطاقة السابقة يتم الاصدار ورقيا من أقرب فرع لقطاع الأحوال المدنية لمحل السكن واعتماد الطلب الورقي من محل العمل كما تم سابقا</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "SYNDICATION").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "RETIRED").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "HOMEOWNER").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "GOV").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "AGRICULTURE").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "TECHNICIAN").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "PRIVATE").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "SYNDICATION_ALL").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "MILITARY").Id, 
+                    Regulations = "<div class='forjob' style='color: rgb(245, 9, 9); '><b>(مهندس فى شركه خاصه ، او طبيب فى مستفى خاص ، ,,,, الخ )</b><br>-يتم استخراج بطاقه الرقم القومى التى تحمل وظيفه نقابيه و قطاع خاص اذا لم يتم مرور 3 سنوات على اصدار اخر بطاقه رقم قومى ، وفى حاله مرور أكثر من 3 سنوات يرجى التوجه الى قسم الانترنت لاعتماد المهنتين  لاستخراج بطاقه الرقم القومى من على الانترنت او التوجه الى اقرب سجل مدنى لاستخراج بطاقه الرقم القومى</div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO005").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "NONE").Id, 
+                    Regulations = "<div class='forservice' style='color:#F50909;'><div align='right'><span class='styleGuidlinesDB1'>ضوابط استخراج شهادات الوفاة من خلال الانترنت</span><br><span class='styleGuidlinesDB2'>شروط استخراج شهادات الوفاة المميكنة</span><br>1. يجب ان تكون شهادة الوفاة مطبوعة سابقاً.<br>2. يجب كتابه اسم المتوفى واسم ام المتوفى ثلاثي او رباعي.<br>3. يجب ان يكون مقدم الطلب أحد اقرباء الدرجة الاولى فقط.</div></div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO003").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "NONE").Id, 
+                    Regulations = "<div class='forservice' style='color:#F50909;'><div align='right'><span class='styleGuidlinesDB1'>ضوابط استخراج شهادات الزواج من خلال الانترنت</span>     <br><span class='styleGuidlinesDB2'>شروط استخراج شهادات الزواج المميكنة</span><br>1. يجب ان تكون وثيقة الزواج مطبوعة سابقاً.<br>2. يجب كتابه بيانات الزوج والزوجة (ثلاثي – رباعي).<br>3. ان يكون تاريخ الزواج  بعد ابريل لسنه 1962.<br>4. يجب ان يكون مقدم الطلب هو صاحب الشأن. </div></div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO004").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "NONE").Id, 
+                    Regulations = "<div class='forservice' style='color:#F50909;'><div align='right'><span class='styleGuidlinesDB1'>ضوابط استخراج شهادات الطلاق من خلال الانترنت</span><br><span class='styleGuidlinesDB2'>شروط استخراج شهادات الطلاق المميكنة</span><br>1. يجب ان تكون وثيقة الطلاق مطبوعة سابقاً.<br>2. يجب كتابه بيانات المطلق والمطلقة (ثلاثي – رباعي).<br>3. يجب ان يكون تاريخ الطلاق  بعد ابريل لسنه 1962.<br>4. يجب ان يكون مقدم الطلب هو صاحب الشأن. </div></div>" },
+                    new Regulation { DocumentTypeId = docTypes.First(a => a.Code == "MOICSO001").Id, JobTypeNIDId=jobTypesForNid.First(a => a.Code == "NONE").Id, 
+                    Regulations = "<div class='forservice' style='color:#F50909;'><div align='right'><span class='styleGuidlinesDB1'>ضوابط استخراج شهادة ميلاد من خلال الانترنت</span><br><span class='styleGuidlinesDB2'>يتم استخراج شهادة الميلاد المميكنة لثانى مرة</span><br><span class='styleGuidlinesDB2'>بشرط استخراج شهادة ميلاد مميكنة مطبوعة سابقاً</span><br>1. يجب كتابة اسم المستفيد واسم الام له بطريقة صحيحة حيث ان المستفيد هو الشخص الذي سوف يتم طباعه الشهادة له.<br>2. يجب ان يكون مقدم الطلب هو صاحب الشأن او لاحد اقرباء الدرجة الأولى.</div></div>" }
+                };
+                context.Regulations.AddRange(regulations);
+                context.SaveChanges();
+            }
+        }
+
+        private static void SeedNidJobTypes(MoisContext context)
+        {
+            if (context.JobTypeNIDs.Count() == 0)
             {
                 var jobTypes = new List<JobTypeNID>
                 {
@@ -74,13 +120,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new JobTypeNID{ Code = "MILITARY", Name = "ضباط الجيش والشرطة والقضاء والعاملين بالبنوك"}
                 };
                 context.JobTypeNIDs.AddRange(jobTypes);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedNidIssuingReasongAsync(MoisContext context)
+        private static void SeedNidIssuingReasong(MoisContext context)
         {
-            if(await context.NidIssueReasons.CountAsync() == 0)
+            if (context.NidIssueReasons.Count() == 0)
             {
                 var reasons = new List<NidIssueReason>
                 {
@@ -91,13 +137,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new NidIssueReason{ Code = "LOST", Name = "بدل فاقد"}
                 };
                 context.NidIssueReasons.AddRange(reasons);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedIssuersAsync(MoisContext context)
+        private static void SeedIssuers(MoisContext context)
         {
-            if (await context.Issuers.CountAsync() == 0)
+            if (context.Issuers.Count() == 0)
             {
                 var issuers = new List<Issuer>
                     {
@@ -106,13 +152,13 @@ namespace Persistence.EntityFrameworkDataAccess
                         new Issuer(){Code = "MOI-WP", Name = "تصاريح العمل", PackageExpiryInHours = 1680, PackageDescription = "تصاريح العمل", Phone = "12345", ReplyPeriod = 72, HomePageUrl = "http://WPO.moi.gov.eg" }
                     };
                 context.Issuers.AddRange(issuers);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedOrderStatusesAsync(MoisContext context)
+        private static void SeedOrderStatuses(MoisContext context)
         {
-            if (await context.OrderStatuses.CountAsync() == 0)
+            if (context.OrderStatuses.Count() == 0)
             {
 
                 var orderStatuses = new List<OrderStatus>
@@ -126,13 +172,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.OrderStatuses.AddRange(orderStatuses);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedGendersAsync(MoisContext context)
+        private static void SeedGenders(MoisContext context)
         {
-            if (await context.Genders.CountAsync() == 0)
+            if (context.Genders.Count() == 0)
             {
 
                 var genders = new List<Gender>
@@ -142,13 +188,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.Genders.AddRange(genders);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedPaymentMethodsAsync(MoisContext context)
+        private static void SeedPaymentMethods(MoisContext context)
         {
-            if (await context.PaymentMethods.CountAsync() == 0)
+            if (context.PaymentMethods.Count() == 0)
             {
 
                 var paymentMethods = new List<PaymentMethod>
@@ -158,13 +204,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.PaymentMethods.AddRange(paymentMethods);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedRelationsAsync(MoisContext context)
+        private static void SeedRelations(MoisContext context)
         {
-            if (await context.Relations.CountAsync() == 0)
+            if (context.Relations.Count() == 0)
             {
                 var relations = new List<Relation>
                 {
@@ -183,17 +229,17 @@ namespace Persistence.EntityFrameworkDataAccess
                     new Relation(){ Code = "WIFE", Name = "زوجة مقدم الطلب" }
                 };
                 context.Relations.AddRange(relations);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedDocumentsRelationsAsync(MoisContext context)
+        private static void SeedDocumentsRelations(MoisContext context)
         {
-            if (await context.DocumentTypeRelations.CountAsync() == 0)
+            if (context.DocumentTypeRelations.Count() == 0)
             {
-                var docTypes = await context.DocumentTypes.ToListAsync();
-                var relations = await context.Relations.ToListAsync();
-                var genders = await context.Genders.ToListAsync();
+                var docTypes = context.DocumentTypes.ToList();
+                var relations = context.Relations.ToList();
+                var genders = context.Genders.ToList();
                 var docTypesRelations = new List<DocumentTypeRelation>
                 {
                     //Birth Doc
@@ -279,44 +325,44 @@ namespace Persistence.EntityFrameworkDataAccess
                     new DocumentTypeRelation{ DocumentTypeId = docTypes.First(a => a.Code == "MOICSO002").Id, RelationId = relations.First(a => a.Code == "SELF").Id, GenderId = genders.First(a => a.Code == "F").Id},
                 };
                 context.DocumentTypeRelations.AddRange(docTypesRelations);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedDocTypesAsync(MoisContext context)
+        private static void SeedDocTypes(MoisContext context)
         {
-            if (await context.DocumentTypes.CountAsync() == 0)
+            if (context.DocumentTypes.Count() == 0)
             {
                 var docTypes = new List<DocumentType>
                 {
-                    new DocumentType(){Code = "CSR", Name = "صحيفة الحالة الجنائية", MaxCopies = 1, Price = 60, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSR")).Id },
-                    new DocumentType(){Code = "CR", Name = "طلب مخالصة", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
-                    new DocumentType(){Code = "WP", Name = "تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
-                    new DocumentType(){Code = "WPL", Name = @"بدل فاقد\تالف تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-WP")).Id },
-                    new DocumentType(){Code = "MOICSO001", Name = "وثيقة ميلاد", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO002", Name = "بطاقة رقم قومى بدل فاقد/تالف", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO003", Name = "وثيقة زواج", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO004", Name = "وثيقة طلاق", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO005", Name = "قيد وفاة", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO006", Name = "قيد عائلى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO007", Name = "قيد فردى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO008", Name = "إعادة تصوير بطاقة رقم قومى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO009", Name = "بطاقة رقم قومى أول مرة", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO013", Name = "وثيقة ميلاد اول مرة", MaxCopies = 20, Price = 71, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO111", Name = "استمارة رقم قومي مستعجلة", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO112", Name = "استمارة رقم قومي عادية", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO113", Name = "استمارة رقم قومي شاملة التصوير المنزلى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO141", Name = "بطاقة رقم قومى أول مرة لكبار السن والمرضى", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id },
-                    new DocumentType(){Code = "MOICSO142", Name = "بطاقة رقم قومى أول مرة لذوى الاحتياجات الخاصة", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (await context.Issuers.FirstAsync(a => a.Code == "MOI-CSO")).Id }
+                    new DocumentType(){Code = "CSR", Name = "صحيفة الحالة الجنائية", MaxCopies = 1, Price = 60, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSR")).Id },
+                    new DocumentType(){Code = "CR", Name = "طلب مخالصة", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "WP", Name = "تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "WPL", Name = @"بدل فاقد\تالف تصريح عمل", MaxCopies = 1, Price = 1, MaxBeneficiaries = 1, CanBeBundled = false, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-WP")).Id },
+                    new DocumentType(){Code = "MOICSO001", Name = "وثيقة ميلاد", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO002", Name = "بطاقة رقم قومى بدل فاقد/تالف", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO003", Name = "وثيقة زواج", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO004", Name = "وثيقة طلاق", MaxCopies = 20, Price = 59, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO005", Name = "قيد وفاة", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO006", Name = "قيد عائلى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO007", Name = "قيد فردى", MaxCopies = 20, Price = 54, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO008", Name = "إعادة تصوير بطاقة رقم قومى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO009", Name = "بطاقة رقم قومى أول مرة", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO013", Name = "وثيقة ميلاد اول مرة", MaxCopies = 20, Price = 71, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO111", Name = "استمارة رقم قومي مستعجلة", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO112", Name = "استمارة رقم قومي عادية", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO113", Name = "استمارة رقم قومي شاملة التصوير المنزلى", MaxCopies = 20, Price = 155, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO141", Name = "بطاقة رقم قومى أول مرة لكبار السن والمرضى", MaxCopies = 20, Price = 105, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id },
+                    new DocumentType(){Code = "MOICSO142", Name = "بطاقة رقم قومى أول مرة لذوى الاحتياجات الخاصة", MaxCopies = 20, Price = 30, MaxBeneficiaries = 20, CanBeBundled = true, IsInstantApproval = false, Agreement = "", IssuerId = (context.Issuers.First(a => a.Code == "MOI-CSO")).Id }
                 };
                 context.DocumentTypes.AddRange(docTypes);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedStatesAsync(MoisContext context)
+        private static void SeedStates(MoisContext context)
         {
-            if (await context.States.CountAsync() == 0)
+            if (context.States.Count() == 0)
             {
                 var states = new List<State>
                 {
@@ -341,13 +387,13 @@ namespace Persistence.EntityFrameworkDataAccess
                     new State(){ Code = "REFUNDING", Name = "جاري الإسترداد" }
                 };
                 context.States.AddRange(states);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedUsersAsync(MoisContext context, IPasswordHasher passwordHasher)
+        private static void SeedUsers(MoisContext context, IPasswordHasher passwordHasher)
         {
-            if (await context.Users.CountAsync() == 0)
+            if (context.Users.Count() == 0)
             {
                 var users = new List<User>
                 {
@@ -357,22 +403,22 @@ namespace Persistence.EntityFrameworkDataAccess
 
                 users[0].UserRoles.Add(new UserRole
                 {
-                    RoleId = (await context.Roles.SingleOrDefaultAsync(r => r.Name == ERole.Administrator.ToString())).Id
+                    RoleId = (context.Roles.SingleOrDefault(r => r.Name == ERole.Administrator.ToString())).Id
                 });
 
                 users[1].UserRoles.Add(new UserRole
                 {
-                    RoleId = (await context.Roles.SingleOrDefaultAsync(r => r.Name == ERole.Common.ToString())).Id
+                    RoleId = (context.Roles.SingleOrDefault(r => r.Name == ERole.Common.ToString())).Id
                 });
 
                 context.Users.AddRange(users);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedRolesAsync(MoisContext context)
+        private static void SeedRoles(MoisContext context)
         {
-            if (await context.Roles.CountAsync() == 0)
+            if (context.Roles.Count() == 0)
             {
 
                 var roles = new List<Role>
@@ -382,13 +428,13 @@ namespace Persistence.EntityFrameworkDataAccess
                 };
 
                 context.Roles.AddRange(roles);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedGovernoratesAsync(MoisContext context)
+        private static void SeedGovernorates(MoisContext context)
         {
-            if (await context.Governorates.CountAsync() == 0)
+            if (context.Governorates.Count() == 0)
             {
                 var govs = new List<Governorate>
                 {
@@ -421,15 +467,15 @@ namespace Persistence.EntityFrameworkDataAccess
                     new Governorate { Code = "36", Name = "الأقصر"},
                 };
                 context.Governorates.AddRange(govs);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
-        
-        private static async Task SeedPoliceDepartmentsAsync(MoisContext context)
+
+        private static void SeedPoliceDepartments(MoisContext context)
         {
-            if (await context.PoliceDepartments.CountAsync() == 0)
+            if (context.PoliceDepartments.Count() == 0)
             {
-                var govs = await context.Governorates.ToListAsync();
+                var govs = context.Governorates.ToList();
                 var policeDepts = new List<PoliceDepartment>
                 {
                     new PoliceDepartment { Code = "2", Name = "فسم المعصرة", GovernorateId= govs.First(a => a.Code == "1").Id },
@@ -806,15 +852,15 @@ namespace Persistence.EntityFrameworkDataAccess
                     new PoliceDepartment { Code = "3", Name = "مركز شرطة طيبة", GovernorateId= govs.First(a => a.Code == "36").Id },
                 };
                 context.PoliceDepartments.AddRange(policeDepts);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
         }
 
-        private static async Task SeedPostalCodes(MoisContext context)
+        private static void SeedPostalCodes(MoisContext context)
         {
-            if (await context.PostalCodes.CountAsync() == 0)
+            if (context.PostalCodes.Count() == 0)
             {
-                var govs = await context.Governorates.ToListAsync();
+                var govs = context.Governorates.ToList();
                 var postalCodes = new List<PostalCode>
                 {
                     new PostalCode { Code = "11511", Name = "القاهرة الرئيسى", Address = "ميدان العتبة/1ش عبد الخالق ثروت", GovernorateId= govs.First(a => a.Code == "1").Id },
@@ -4784,8 +4830,8 @@ namespace Persistence.EntityFrameworkDataAccess
                     new PostalCode { Code = "85959", Name = "الاقصر محطة ( مسائى )", Address = "داخل محطة سكة حديد الاقصر", GovernorateId= govs.First(a => a.Code == "36").Id },
                 };
                 context.PostalCodes.AddRange(postalCodes);
-                await context.SaveChangesAsync();
+                context.SaveChanges();
             }
-        }        
+        }
     }
 }

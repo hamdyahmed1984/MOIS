@@ -1,0 +1,103 @@
+<form [formGroup]="docForm">
+  <div class="form-row">
+    <div class="col-9">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="head text-center">{{title}}</h5>
+        </div>
+        <div class="card-body">
+          <div class="form-row" formGroupName="requesterName">
+            <div class="col form-group">
+              <label for="firstName">FirstName</label>
+              <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control"
+                required>
+            </div>
+            <div class="col form-group">
+              <label for="fatherName">FatherName</label>
+              <input type="text" id="fatherName" name="fatherName" formControlName="fatherName" class="form-control"
+                required>
+            </div>
+            <div class="col form-group">
+              <label for="grandFatherName">GrandFatherName</label>
+              <input type="text" id="grandFatherName" name="grandFatherName" formControlName="grandFatherName"
+                class="form-control" required>
+            </div>
+            <div class="col form-group">
+              <label for="familyName">FamilyName</label>
+              <input type="text" id="familyName" name="familyName" formControlName="familyName" class="form-control"
+                required>
+            </div>
+          </div>
+
+          <div class='form-row'>
+            <div class="col form-group">
+              <label for="motherFullName">MotherFullName</label>
+              <input type="text" id="motherFullName" name="motherFullName" formControlName="motherFullName"
+                class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-2 form-group">
+              <label for="sel-genders">Gender</label>
+              <select id="sel-genders" name="sel-genders" class="custom-select" formControlName="genderId" required>
+                <option selected="" value=""></option>
+                <option [ngValue]="gender.Id" [attr.data-code]="gender.Code" *ngFor="let gender of gendersList">
+                  {{gender.Name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="col form-group">
+              <label for="NID">NID</label>
+              <input type="text" id="NID" name="NID" formControlName="NID" class="form-control">
+            </div>
+
+          </div>
+
+          <div class="form-row">
+            <div class="col-2 form-group">
+              <label for="sel-relations">Relation</label>
+              <select id="sel-relations" name="sel-genders" class="custom-select" formControlName="relationId" required>
+                <option selected="" value=""></option>
+                <option [ngValue]="relation.Id" [attr.data-code]="relation.Code" *ngFor="let relation of relationsList">
+                  {{relation.Name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="col-2 form-group">
+              <label for="sel-numberOfCopies">Number of copies</label>
+              <select id="sel-numberOfCopies" name="sel-numberOfCopies" class="custom-select"
+                formControlName="numberOfCopies" required>
+                <option selected="" value=""></option>
+                <option [ngValue]="num.id" [attr.data-code]="num.value" *ngFor="let num of numberOfCopiesList">
+                  {{num.value}}
+                </option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5>Regulations</h5>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="card-text text-muted" [innerHTML]="regulations">
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="chkAgree" formControlName="agreement" required>
+            <label class="form-check-label" for="chkAgree">Agree</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

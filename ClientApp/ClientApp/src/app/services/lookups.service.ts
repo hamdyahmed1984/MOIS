@@ -12,6 +12,7 @@ import { BaseService } from './base.service';
 import { LookupBaseModel } from '../models/Lookups/LookupBaseModel';
 import { PoliceDepartmentModel } from '../models/Lookups/PoliceDepartmentModel';
 import { PostalCodeModel } from '../models/Lookups/PostalCodeModel';
+import { RegulationModel } from '../models/Lookups/RegulationModel';
 
 @Injectable({
   providedIn: 'root'
@@ -24,21 +25,41 @@ export class LookupsService extends BaseService {
 
   getGenders(): Observable<LookupBaseModel[]> {
     return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/genders')
-      .pipe(catchError(super.handleError<LookupBaseModel[]>("LookupsService.getGenders")));
+      .pipe(catchError(super.handleError<LookupBaseModel[]>('LookupsService.getGenders')));
+  }
+
+  getJobTypesForNid(): Observable<LookupBaseModel[]> {
+    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/nid-job-types')
+      .pipe(catchError(super.handleError<LookupBaseModel[]>('LookupsService.getJobTypesForNid')));
+  }
+
+  getIssuingReasonsForNid(): Observable<LookupBaseModel[]> {
+    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/nid-issue-reasons')
+      .pipe(catchError(super.handleError<LookupBaseModel[]>('LookupsService.getIssuingReasonsForNid')));
+  }
+
+  getRelations(): Observable<LookupBaseModel[]> {
+    return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/relations')
+      .pipe(catchError(super.handleError<LookupBaseModel[]>('LookupsService.getRelations')));
   }
 
   getGovernorates(): Observable<LookupBaseModel[]> {
     return this.httpClient.get<LookupBaseModel[]>(this.apiUrl + 'api/lookups/govs')
-      .pipe(catchError(super.handleError<LookupBaseModel[]>("LookupsService.getGovernorates")));
+      .pipe(catchError(super.handleError<LookupBaseModel[]>('LookupsService.getGovernorates')));
   }
 
   getPoliceDepartments(): Observable<PoliceDepartmentModel[]> {
     return this.httpClient.get<PoliceDepartmentModel[]>(this.apiUrl + 'api/lookups/police-depts')
-      .pipe(catchError(super.handleError<PoliceDepartmentModel[]>("LookupsService.getPoliceDepartments")));
+      .pipe(catchError(super.handleError<PoliceDepartmentModel[]>('LookupsService.getPoliceDepartments')));
   }
 
   getPostalCodes(): Observable<PostalCodeModel[]> {
     return this.httpClient.get<PostalCodeModel[]>(this.apiUrl + 'api/lookups/postal-codes')
-      .pipe(catchError(super.handleError<PostalCodeModel[]>("LookupsService.getPostalCodes")));
+      .pipe(catchError(super.handleError<PostalCodeModel[]>('LookupsService.getPostalCodes')));
+  }
+
+  getRegulations(): Observable<RegulationModel[]> {
+    return this.httpClient.get<RegulationModel[]>(this.apiUrl + 'api/lookups/regulations')
+      .pipe(catchError(super.handleError<RegulationModel[]>('LookupsService.getRegulations')));
   }
 }

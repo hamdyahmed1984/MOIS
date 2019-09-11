@@ -8,6 +8,7 @@ namespace Persistence.EntityFrameworkDataAccess.Configuration
     {
         public void Configure(EntityTypeBuilder<Regulation> builder)
         {
+            builder.ToTable("Regulations");
             builder.HasKey(t => new { t.DocumentTypeId, t.JobTypeNIDId });
         }
     }

@@ -90,6 +90,14 @@ namespace ClientApp.Controllers
             return _mapper.Map<IEnumerable<State>, IEnumerable<LookupBaseResource>>(await _lookupsService.GetLookups<State>());
         }
 
+        [Route("/api/[controller]/regulations")]
+        [HttpGet]
+        public async Task<IEnumerable<RegulationResource>> GetRegulationsAsync()
+        {
+            var regulations = await _lookupsService.GetLookups<Regulation>("DocumentType");
+            return _mapper.Map<IEnumerable<Regulation>, IEnumerable<RegulationResource>>(regulations);
+        }
+
         //[Route("/api/[controller]/order-status")]
         //[HttpGet]
         //public async Task<IEnumerable<LookupBaseResource>> GetOrderStatusesAsync()

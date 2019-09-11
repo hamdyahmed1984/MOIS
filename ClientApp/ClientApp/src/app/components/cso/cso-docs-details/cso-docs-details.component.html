@@ -1,0 +1,29 @@
+<form>
+
+  <ng-template #docContainer></ng-template>
+
+  <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info rounded-pill" (click)="goPrevious()">
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-left"></span>
+      </button>
+      <span>Doc {{ docTypesModel.getCurrentDocIndex() + 1 }} of {{ docTypesModel.getTotalDocsCount() }}</span>
+      <button type="button" class="btn btn-info rounded-pill" [disabled]="!isValid()" (click)="goNext()">
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info rounded-pill" (click)="goPrevious()">
+        Previous
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-left"></span>
+      </button>
+      <button type="button" class="btn btn-info rounded-pill" [disabled]="!isValid()" (click)="goNext()">
+        Next
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div> -->
+</form>

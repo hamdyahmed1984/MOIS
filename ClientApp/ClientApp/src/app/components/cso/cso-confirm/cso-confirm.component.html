@@ -1,0 +1,65 @@
+<div class="card">
+  <div class="card-header">
+    Requester Data
+  </div>
+  <div class="card-body">
+    <div class="card-text table table-sm table-responsive table-bordered">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">Name</th>
+            <td>{{requestModel.Name.FullName}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Mother Full Name</th>
+            <td>{{requestModel.MotherFullName}}</td>
+          </tr>
+          <tr>
+            <th scope="row">NID</th>
+            <td>{{requestModel.NID.NationalIdenNumber}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Gender</th>
+            <td>{{requestModel.GenderId}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>{{requestModel.ContactDetails.Email}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Mobile</th>
+            <td>{{requestModel.ContactDetails.Mobile1}}<span *ngIf='requestModel.ContactDetails.Mobile2'> -
+                {{requestModel.ContactDetails.Mobile2}}</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Phone</th>
+            <td><span *ngIf='requestModel.ContactDetails.PhoneHome'>{{requestModel.ContactDetails.PhoneHome}}</span>
+              <span *ngIf='requestModel.ContactDetails.PhoneWork'> - {{requestModel.ContactDetails.PhoneWork}}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br />
+<div *ngFor='let doc of docTypesModel.GetDocs()'>
+
+  <div class="card">
+    <div class="card-header">
+      {{getDocName(doc.docTypeEnum)}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <div class="card-text">
+        <table class="table table-sm table-responsive">
+
+        </table>
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+      Guidelines go here..
+    </div>
+  </div>
+  <br />
+</div>

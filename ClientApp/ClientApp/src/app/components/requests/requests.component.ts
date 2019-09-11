@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
-import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { Router } from '@angular/router';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 import { RequestsService } from '../../services/requests.service';
@@ -8,7 +8,7 @@ import { RequestModel, RequesterNameModel, ContactDetailsModel, AddressModel, NI
 import { LookupsService } from './../../services/lookups.service';
 import { forbiddenNameValidator } from './../../helpers/forbidden-name';
 import { sameNameValidator } from './../../helpers/same-name';
-import { CsrFormDataService } from './../../services/csr-form-data.service';
+import { CsoFormDataService } from './../../services/cso-form-data.service';
 
 @Component({
   selector: 'app-requests',
@@ -22,8 +22,8 @@ export class RequestsComponent implements OnInit {
 
   gendersList: any;
   selectedGender: number;
-  //residencyAddressModel: AddressModel;
-  //deliveryAddressModel: AddressModel;
+  // residencyAddressModel: AddressModel;
+  // deliveryAddressModel: AddressModel;
   isLoading: boolean;
 
   requestForm: FormGroup;
@@ -31,38 +31,38 @@ export class RequestsComponent implements OnInit {
   constructor(private requestsService: RequestsService,
     private lookupsService: LookupsService,
     private router: Router,
-    private csrFormDataService: CsrFormDataService) {
+    private csoFormDataService: CsoFormDataService) {
     this.requestForm = this.createFormGroup();
   }
 
   ngOnInit() {
-    this.requestModel = this.csrFormDataService.getRequestModel();
+    this.requestModel = this.csoFormDataService.getRequestModel();
     this.getGendersList();
     this.setFormValuesFromModel(this.requestModel);
   }
 
   set(form: any): boolean {
-    if (!form.valid)
+    if (!form.valid) {
       return false;
+    }
 
     this.getRequestModelFromFormValues();
-    this.csrFormDataService.setRequestModel(this.requestModel);
+    this.csoFormDataService.setRequestModel(this.requestModel);
     return true;
   }
 
   goNext(form: any) {
-    if (this.set(form))
-      this.router.navigate(['/csr/address']);
+    if (this.set(form)) {
+      this.router.navigate(['/cso/address']);
+    }
   }
 
   getGendersList() {
-    //return [{ "Id": 1, "Name": "Male" },
-    //{ "Id": 2, "Name": "Female" }];
     this.lookupsService.getGenders().subscribe(genders => { this.gendersList = genders; console.log(this.gendersList); });
   }
 
   selectGender() {
-    console.log("Selected gender: " + this.requestForm.get('genderId').value);
+    console.log('Selected gender: ' + this.requestForm.get('genderId').value);
   }
 
   createRequest() {
@@ -84,7 +84,8 @@ export class RequestsComponent implements OnInit {
       issuerId: new FormControl(''),
       paymentMethodId: new FormControl(''),
       requesterName: new FormGroup({
-        firstName: new FormControl('', [Validators.required, Validators.maxLength(20), forbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator.
+        // <-- Here's how you pass in the custom validator.
+        firstName: new FormControl('', [Validators.required, Validators.maxLength(20), forbiddenNameValidator(/bob/i)
         ]),
         fatherName: new FormControl('', [Validators.required, Validators.maxLength(20)]),
         grandFatherName: new FormControl('', [Validators.required, Validators.maxLength(20)]),
@@ -101,23 +102,23 @@ export class RequestsComponent implements OnInit {
   }
 
   private getRequestModelFromFormValues(): RequestModel {
-    //requestModel.Id = requestForm.value.Id;
+    // requestModel.Id = requestForm.value.Id;
     this.requestModel.GenderId = this.requestForm.get('genderId').value;
     this.requestModel.NID = new NID(this.requestForm.get('NID').value);
     this.requestModel.MotherFullName = this.requestForm.get('motherFullName').value;
-    this.requestModel.PaymentMethodId = 2;//Consider changing this
-    this.requestModel.IssuerId = 1;//Consider changing this
+    this.requestModel.PaymentMethodId = 2; // Consider changing this
+    this.requestModel.IssuerId = 1; // Consider changing this
 
     this.requestModel.Name = this.getRequesterNameFromFormValues();
     this.requestModel.ContactDetails = this.getContactDetailsFromFormValues();
-    //this.requestModel.ResidencyAddress = this.residencyAddressModel;
-    //this.requestModel.DeliveryAddress = this.requestForm.get('residencyAddressSameAsDeliveryAddress').value ?
+    // this.requestModel.ResidencyAddress = this.residencyAddressModel;
+    // this.requestModel.DeliveryAddress = this.requestForm.get('residencyAddressSameAsDeliveryAddress').value ?
     //  this.requestModel.ResidencyAddress : this.deliveryAddressModel;
     console.log(this.requestModel);
     return this.requestModel;
   }
   private getRequesterNameFromFormValues(): RequesterNameModel {
-    let requesterNameModel = new RequesterNameModel();
+    const requesterNameModel = new RequesterNameModel();
 
     requesterNameModel.FirstName = this.requestForm.get('requesterName.firstName').value;
     requesterNameModel.FatherName = this.requestForm.get('requesterName.fatherName').value;
@@ -127,7 +128,7 @@ export class RequestsComponent implements OnInit {
     return requesterNameModel;
   }
   private getContactDetailsFromFormValues(): ContactDetailsModel {
-    let contactDetailsModel = new ContactDetailsModel();
+    const contactDetailsModel = new ContactDetailsModel();
 
     contactDetailsModel.Email = this.requestForm.get('contactDetails.email').value;
     contactDetailsModel.PhoneHome = this.requestForm.get('contactDetails.phoneHome').value;

@@ -1,0 +1,81 @@
+<form [formGroup]="docTypesForm">
+  <h4 class="head text-center">{{title}}</h4>
+
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        Birth Doc beneficiaries
+      </div>
+      <div class="card-footer text-muted">
+        <select formControlName="birthDocsCount" id="birthDocsCount" class='custom-select'>
+          <option *ngFor="let count of docsCountsList; let i = index" [value]="docsCountsList[i].id">
+            {{docsCountsList[i].value}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        Death Doc beneficiaries
+      </div>
+      <div class="card-footer text-muted">
+        <select formControlName="deathDocsCount" id="deathDocsCount" class='custom-select'>
+          <option *ngFor="let count of docsCountsList; let i = index" [value]="docsCountsList[i].id">
+            {{docsCountsList[i].value}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        Nid Doc beneficiaries
+      </div>
+      <div class="card-footer text-muted">
+        <select formControlName="nidDocsCount" id="nidDocsCount" class='custom-select'>
+          <option *ngFor="let count of docsCountsList; let i = index" [value]="docsCountsList[i].id">
+            {{docsCountsList[i].value}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        Marridage Doc beneficiaries
+      </div>
+      <div class="card-footer text-muted">
+        <select formControlName="marriageDocsCount" id="marriageDocsCount" class='custom-select'>
+          <option *ngFor="let count of docsCountsList; let i = index" [value]="docsCountsList[i].id">
+            {{docsCountsList[i].value}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        Divorce Doc beneficiaries
+      </div>
+      <div class="card-footer text-muted">
+        <select formControlName="divorceDocsCount" id="divorceDocsCount" class='custom-select'>
+          <option *ngFor="let count of docsCountsList; let i = index" [value]="docsCountsList[i].id">
+            {{docsCountsList[i].value}}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+<br/>
+
+  <div class="form-row">
+    <div class="col text-center">
+      <button type="button" class="btn btn-info  rounded-pill" (click)="goPrevious()">
+        Previous
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-left"></span>
+      </button>
+      <button type="button" class="btn btn-info  rounded-pill" [disabled]="!isValid()" (click)="goNext()">
+        Next
+        <span style="margin-left:10px;" class="fa fa-arrow-alt-circle-right"></span>
+      </button>
+    </div>
+  </div>
+</form>

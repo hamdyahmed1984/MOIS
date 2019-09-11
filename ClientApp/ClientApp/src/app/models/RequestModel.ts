@@ -3,7 +3,7 @@ export class RequestModel {
   Id: number;
   Name: RequesterNameModel;
   MotherFullName: string;
-  GenderId: number
+  GenderId: number;
   NID: NID;
   ContactDetails: ContactDetailsModel;
   ResidencyAddress: AddressModel;
@@ -17,7 +17,10 @@ export class RequesterNameModel {
   FatherName: string;
   GrandFatherName: string;
   FamilyName: string;
-  FullName: string;
+  // FullName: string;
+  get FullName(): string {
+    return this.FirstName + ' ' + this.FatherName + ' ' + this.GrandFatherName + ' ' + this.FamilyName;
+  }
 }
 
 export class NID {

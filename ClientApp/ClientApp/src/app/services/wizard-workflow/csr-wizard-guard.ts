@@ -18,7 +18,7 @@ export class CsrWizardGuard implements CanActivate {
     // If any of the previous steps is invalid, go back to the first invalid step
     let firstPath = this.csrWizardWorkflowService.getFirstInvalidStep(path);
     if (firstPath.length > 0) {
-      console.log("Redirected to '" + firstPath + "' path which it is the first invalid step.");
+      console.log("CSR redirected to '" + firstPath + "' path which it is the first invalid step.");
       let url = `csr/${firstPath}`;
       this.router.navigate([url]);
       return false;

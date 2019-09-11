@@ -12,14 +12,15 @@ export class WizardWorkflowService {
     // If the state is found, set the valid field to true
     let found = false;
     for (let i = 0; i < this.steps.length && !found; i++) {
-      if (this.steps[i].Step === step)
+      if (this.steps[i].Step === step) {
         found = this.steps[i].Valid = true;
+      }
     }
   }
 
   unValidateStep(step: string) {
     // If the state is found, set the valid field to true
-    let found = false;
+    const found = false;
     for (let i = 0; i < this.steps.length; i++) {
       if (this.steps[i].Step === step) {
         this.steps[i].Valid = false;
@@ -40,14 +41,13 @@ export class WizardWorkflowService {
     // Otherwise, return the first invalid step
     let valid = true;
     let found = false;
-    var redirectToStep = '';
+    let redirectToStep = '';
     for (let i = 0; i < this.steps.length && valid && !found; i++) {
-      let itm = this.steps[i];
+      const itm = this.steps[i];
       if (itm.Step === step) {
         found = true;
         redirectToStep = '';
-      }
-      else {
+      } else {
         valid = itm.Valid;
         redirectToStep = itm.Step;
       }

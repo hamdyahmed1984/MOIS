@@ -10,14 +10,14 @@ using Persistence.EntityFrameworkDataAccess;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(MoisContext))]
-    [Migration("20190627135019_Initial")]
+    [Migration("20190907020836_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -80,7 +80,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<int>("NumberOfCopies");
+                    b.Property<int>("NumberOfCopies")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(1);
 
                     b.Property<int>("RelationId");
 
@@ -150,7 +152,9 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(100);
 
-                    b.Property<int>("NumberOfCopies");
+                    b.Property<int>("NumberOfCopies")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(1);
 
                     b.Property<int>("RelationId");
 
@@ -183,7 +187,9 @@ namespace Persistence.Migrations
 
                     b.Property<DateTime?>("LastEditDate");
 
-                    b.Property<int>("NumberOfCopies");
+                    b.Property<int>("NumberOfCopies")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(1);
 
                     b.Property<int>("RelationId");
 
@@ -277,7 +283,9 @@ namespace Persistence.Migrations
 
                     b.Property<DateTime?>("LastEditDate");
 
-                    b.Property<int>("NumberOfCopies");
+                    b.Property<int>("NumberOfCopies")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(1);
 
                     b.Property<int>("RelationId");
 
@@ -322,7 +330,9 @@ namespace Persistence.Migrations
 
                     b.Property<int>("NidIssueReasonId");
 
-                    b.Property<int>("NumberOfCopies");
+                    b.Property<int>("NumberOfCopies")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(1);
 
                     b.Property<int>("RequestId");
 
@@ -1246,7 +1256,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("JobTypeNIDId");
 
-                    b.ToTable("Regulation");
+                    b.ToTable("Regulations");
                 });
 
             modelBuilder.Entity("Domain.Entities.Lookups.RejectionReason", b =>

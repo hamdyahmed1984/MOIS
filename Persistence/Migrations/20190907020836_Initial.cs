@@ -703,7 +703,7 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Regulation",
+                name: "Regulations",
                 columns: table => new
                 {
                     DocumentTypeId = table.Column<int>(nullable: false),
@@ -712,15 +712,15 @@ namespace Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Regulation", x => new { x.DocumentTypeId, x.JobTypeNIDId });
+                    table.PrimaryKey("PK_Regulations", x => new { x.DocumentTypeId, x.JobTypeNIDId });
                     table.ForeignKey(
-                        name: "FK_Regulation_DocumentType_DocumentTypeId",
+                        name: "FK_Regulations_DocumentType_DocumentTypeId",
                         column: x => x.DocumentTypeId,
                         principalTable: "DocumentType",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Regulation_JobTypeNID_JobTypeNIDId",
+                        name: "FK_Regulations_JobTypeNID_JobTypeNIDId",
                         column: x => x.JobTypeNIDId,
                         principalTable: "JobTypeNID",
                         principalColumn: "Id",
@@ -925,7 +925,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NumberOfCopies = table.Column<int>(nullable: false),
+                    NumberOfCopies = table.Column<int>(nullable: false, defaultValue: 1),
                     RequestId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: true),
                     IPAddress = table.Column<string>(nullable: true),
@@ -1007,7 +1007,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NumberOfCopies = table.Column<int>(nullable: false),
+                    NumberOfCopies = table.Column<int>(nullable: false, defaultValue: 1),
                     RequestId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: true),
                     IPAddress = table.Column<string>(nullable: true),
@@ -1057,7 +1057,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NumberOfCopies = table.Column<int>(nullable: false),
+                    NumberOfCopies = table.Column<int>(nullable: false, defaultValue: 1),
                     RequestId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: true),
                     IPAddress = table.Column<string>(nullable: true),
@@ -1150,7 +1150,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NumberOfCopies = table.Column<int>(nullable: false),
+                    NumberOfCopies = table.Column<int>(nullable: false, defaultValue: 1),
                     RequestId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: true),
                     IPAddress = table.Column<string>(nullable: true),
@@ -1193,7 +1193,7 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NumberOfCopies = table.Column<int>(nullable: false),
+                    NumberOfCopies = table.Column<int>(nullable: false, defaultValue: 1),
                     RequestId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: true),
                     IPAddress = table.Column<string>(nullable: true),
@@ -1845,8 +1845,8 @@ namespace Persistence.Migrations
                 column: "QualificationTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Regulation_JobTypeNIDId",
-                table: "Regulation",
+                name: "IX_Regulations_JobTypeNIDId",
+                table: "Regulations",
                 column: "JobTypeNIDId");
 
             migrationBuilder.CreateIndex(
@@ -2090,7 +2090,7 @@ namespace Persistence.Migrations
                 name: "PersonalRecords");
 
             migrationBuilder.DropTable(
-                name: "Regulation");
+                name: "Regulations");
 
             migrationBuilder.DropTable(
                 name: "RequestState");

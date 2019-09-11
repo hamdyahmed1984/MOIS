@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChildren, QueryList, AfterViewInit, ChangeDetect
 import { FormControl } from '@angular/forms';
 import { AddressModel, AddressGroupModel, } from '../../models/RequestModel';
 import { Router } from '@angular/router';
-import { CsrFormDataService } from './../../services/csr-form-data.service';
+import { CsoFormDataService } from './../../services/cso-form-data.service';
 import { AddressComponent } from '../address/address.component';
 
 @Component({
@@ -11,12 +11,12 @@ import { AddressComponent } from '../address/address.component';
   styleUrls: ['./address-group.component.css']
 })
 export class AddressGroupComponent implements OnInit, AfterViewInit {
-  @ViewChildren("residencyAddressView") residencyAddressViews: QueryList<any>;
-  @ViewChildren("deliveryAddressView") deliveryAddressViews: QueryList<any>;
+  @ViewChildren('residencyAddressView') residencyAddressViews: QueryList<any>;
+  @ViewChildren('deliveryAddressView') deliveryAddressViews: QueryList<any>;
 
   residencyAddressSameAsDeliveryAddress = new FormControl(true);
-  //residencyAddressModel: AddressModel;
-  //deliveryAddressModel: AddressModel;
+  // residencyAddressModel: AddressModel;
+  // deliveryAddressModel: AddressModel;
   residencyAddressFormValid: boolean;
   deliveryAddressFromValid: boolean;
   addressGroupModel: AddressGroupModel;
@@ -24,51 +24,57 @@ export class AddressGroupComponent implements OnInit, AfterViewInit {
   title = 'Address details';
 
   constructor(private router: Router,
-    private csrFormDataService: CsrFormDataService,
+    private csoFormDataService: CsoFormDataService,
     private changeDetectRef: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.addressGroupModel = this.csrFormDataService.getAddressGroupModelModel();
+    this.addressGroupModel = this.csoFormDataService.getAddressGroupModelModel();
     this.residencyAddressSameAsDeliveryAddress.setValue(this.addressGroupModel.ResidencyAddressSameAsDeliveryAddress);
   }
 
   ngAfterViewInit(): void {
 
-    if (!this.addressGroupModel.ResidencyAddress)
+    if (!this.addressGroupModel.ResidencyAddress) {
       return;
+    }
 
-    let residencyAddressViewsArr: any[] = this.residencyAddressViews.toArray();
-    if (residencyAddressViewsArr.length > 0)
+    const residencyAddressViewsArr: any[] = this.residencyAddressViews.toArray();
+    if (residencyAddressViewsArr.length > 0) {
       residencyAddressViewsArr[0].setFormValuesFromModel(this.addressGroupModel.ResidencyAddress);
+    }
 
-    let deliveryAddressViewsArr: any[] = this.deliveryAddressViews.toArray();
-    if (deliveryAddressViewsArr.length > 0)
+    const deliveryAddressViewsArr: any[] = this.deliveryAddressViews.toArray();
+    if (deliveryAddressViewsArr.length > 0) {
       deliveryAddressViewsArr[0].setFormValuesFromModel(this.residencyAddressSameAsDeliveryAddress.value ?
         this.addressGroupModel.ResidencyAddress : this.addressGroupModel.DeliveryAddress);
-    //This line is important to avoid the exception thrown by Angular when you try to change a variable in AfterViewInit
-    //In our case the variable is change in setFormValuesFromModel
+    }
+    // This line is important to avoid the exception thrown by Angular when you try to change a variable in AfterViewInit
+    // In our case the variable is change in setFormValuesFromModel
     this.changeDetectRef.detectChanges();
   }
 
   set(): boolean {
-    if (!this.isResidencyAddressFormValid() || !this.isResidencyAddressFormValid())
+    if (!this.isResidencyAddressFormValid() || !this.isResidencyAddressFormValid()) {
       return false;
+    }
 
     this.addressGroupModel.ResidencyAddressSameAsDeliveryAddress = this.residencyAddressSameAsDeliveryAddress.value;
-    if (this.addressGroupModel.ResidencyAddressSameAsDeliveryAddress)
+    if (this.addressGroupModel.ResidencyAddressSameAsDeliveryAddress) {
       this.addressGroupModel.DeliveryAddress = this.addressGroupModel.ResidencyAddress;
-    this.csrFormDataService.setAddressGroupModel(this.addressGroupModel);
+    }
+    this.csoFormDataService.setAddressGroupModel(this.addressGroupModel);
     return true;
   }
 
   goPrevious() {
-    //if (this.set(form))
+    // if (this.set(form))
     this.router.navigate(['/csr/requester']);
   }
 
   goNext() {
-    if (this.set())
-      this.router.navigate(['/csr/doc']);
+    if (this.set()) {
+      this.router.navigate(['/cso/docs']);
+    }
   }
 
   onNotifyResidencyAddressPropChange(addressModelAndFormValidity: any) {

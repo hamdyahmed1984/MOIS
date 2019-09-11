@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { LookupsService } from 'src/app/services/lookups.service';
 import { AddressModel } from 'src/app/models/RequestModel';
-import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-address',
@@ -20,8 +20,8 @@ export class AddressComponent implements OnInit {
 
   constructor(private lookupsService: LookupsService) {
     this.getGovsList();
-    //this.getPoliceDeptsList();
-    //this.getPostalCodesList();
+    // this.getPoliceDeptsList();
+    // this.getPostalCodesList();
     this.addressForm = this.createAddressForm();
   }
 
@@ -31,44 +31,42 @@ export class AddressComponent implements OnInit {
   getGovsList() {
     this.lookupsService.getGovernorates().subscribe(govs => {
       this.govsList = govs;
-      console.log("Governorates:");
-      console.log(this.govsList);
+      // console.log('Governorates:');
+      // console.log(this.govsList);
     });
   }
 
   getPoliceDeptsList() {
     this.lookupsService.getPoliceDepartments().subscribe(policeDepts => {
-      this.policeDeptsList = policeDepts.filter(a => a.Governorate.Id == this.addressForm.get('governorateId').value);
-      console.log('Gov ' + this.addressForm.get('governorateId').value +' contains '+ this.policeDeptsList.length + ' police departments.');
+      this.policeDeptsList = policeDepts.filter(a => a.Governorate.Id === this.addressForm.get('governorateId').value);
     });
   }
 
   getPostalCodesList() {
     this.lookupsService.getPostalCodes().subscribe(postalCodes => {
-      this.postalCodesList = postalCodes.filter(a => a.Governorate.Id == this.addressForm.get('governorateId').value);
-      console.log('Gov ' + this.addressForm.get('governorateId').value + ' contains ' + this.postalCodesList.length + ' postal codes.');
+      this.postalCodesList = postalCodes.filter(a => a.Governorate.Id === this.addressForm.get('governorateId').value);
     });
   }
 
   selectGov() {
-    console.log("Selected Gov: " + this.addressForm.get('policeDepartmentId').value);
+    // console.log('Selected Gov: ' + this.addressForm.get('policeDepartmentId').value);
     this.getPoliceDeptsList();
     this.getPostalCodesList();
     this.notifyAddressPropChange();
   }
 
   selectPoliceDept() {
-    console.log("Selected Police Department: " + this.addressForm.get('policeDepartmentId').value);
+    // console.log('Selected Police Department: ' + this.addressForm.get('policeDepartmentId').value);
     this.notifyAddressPropChange();
   }
 
   selectPostalCode() {
-    console.log("Selected Postal Office: " + this.addressForm.get('postalCodeId').value);
+    // console.log('Selected Postal Office: ' + this.addressForm.get('postalCodeId').value);
     this.notifyAddressPropChange();
   }
 
   notifyAddressPropChange() {
-    let addressModel: AddressModel = new AddressModel();
+    const addressModel: AddressModel = new AddressModel();
     addressModel.FlatNumber = this.addressForm.get('flatNumber').value;
     addressModel.FloorNumber = this.addressForm.get('floorNumber').value;
     addressModel.BuildingNumber = this.addressForm.get('buildingNumber').value;
@@ -104,7 +102,7 @@ export class AddressComponent implements OnInit {
       policeDepartmentId: addressModel.PoliceDepartmentId,
       postalCodeId: addressModel.PostalCodeId
     });
-    //Notify the change to make the parent components catch the valid state of the form
+    // Notify the change to make the parent components catch the valid state of the form
     this.notifyAddressPropChange();
   }
 

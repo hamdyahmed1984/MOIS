@@ -15,7 +15,7 @@ namespace Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -1254,7 +1254,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("JobTypeNIDId");
 
-                    b.ToTable("Regulation");
+                    b.ToTable("Regulations");
                 });
 
             modelBuilder.Entity("Domain.Entities.Lookups.RejectionReason", b =>

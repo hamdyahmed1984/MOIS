@@ -53,7 +53,7 @@ namespace ClientApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MoisContext>(c => c.UseSqlServer(Configuration.GetConnectionString("MoisConnection")));
+            services.AddDbContext<MoisContext>(c => c.UseSqlServer(Configuration.GetConnectionString("MoisConnection")).EnableSensitiveDataLogging());
 
             services.AddScoped<IUnitOfWork, MoisContext>();
             services.AddScoped<IRepository<LookupBase>, EfRepository<LookupBase>>();
@@ -105,7 +105,7 @@ namespace ClientApp
                     //This will automatically find any public, non-abstract types that inherit from AbstractValidator
                     //and register them with the container (open generics are not supported so we use type to just bypass this).
                     fv.RegisterValidatorsFromAssemblyContaining<RequestResourceInValidator>();
-                    //By using this: MVC’s validation infrastructure will recursively attempt to automatically find validators for each property
+                    //By using this: MVCï¿½s validation infrastructure will recursively attempt to automatically find validators for each property
                     fv.ImplicitlyValidateChildProperties = true;
                 });
 

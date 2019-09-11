@@ -28,7 +28,7 @@ namespace Persistence.EntityFrameworkDataAccess
         }
 
         public async Task<T> Find<T>(params object[] keyValues) where T : class
-        {            
+        {
             string cachekey = _cacheKey + typeof(T).Name + $".{string.Join("_", keyValues)}";
             return await _memoryCache.GetOrCreateAsync<T>(cachekey, async entry =>
             {
@@ -42,6 +42,15 @@ namespace Persistence.EntityFrameworkDataAccess
             return await _memoryCache.GetOrCreateAsync<IEnumerable<T>>(cachekey, async entry =>
             {
                 return await _lookupsService.GetLookups<T>();
+            });
+        }
+
+        public async Task<IEnumerable<T>> GetLookups<T>(string includeProperties) where T : class
+        {
+            string cachekey = _cacheKey + typeof(T).Name + $".All_" + includeProperties.Replace(",", "_").Replace(" ", "_");
+            return await _memoryCache.GetOrCreateAsync<IEnumerable<T>>(cachekey, async entry =>
+            {
+                return await _lookupsService.GetLookups<T>(includeProperties);
             });
         }
 

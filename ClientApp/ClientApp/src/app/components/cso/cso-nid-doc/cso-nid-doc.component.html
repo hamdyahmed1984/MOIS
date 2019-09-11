@@ -1,0 +1,95 @@
+<form [formGroup]="docForm">
+  <div class="form-row">
+    <div class="col-9">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="head text-center">{{title}}</h5>
+        </div>
+        <div class="card-body">
+          <div class="form-row" formGroupName="requesterName">
+            <div class="col form-group">
+              <label for="firstName">FirstName</label>
+              <input type="text" id="firstName" name="firstName" formControlName="firstName" class="form-control"
+                required>
+            </div>
+            <div class="col form-group">
+              <label for="fatherName">FatherName</label>
+              <input type="text" id="fatherName" name="fatherName" formControlName="fatherName" class="form-control"
+                required>
+            </div>
+            <div class="col form-group">
+              <label for="grandFatherName">GrandFatherName</label>
+              <input type="text" id="grandFatherName" name="grandFatherName" formControlName="grandFatherName"
+                class="form-control" required>
+            </div>
+            <div class="col form-group">
+              <label for="familyName">FamilyName</label>
+              <input type="text" id="familyName" name="familyName" formControlName="familyName" class="form-control"
+                required>
+            </div>
+          </div>
+
+          <div class='form-row'>
+
+            <div class="col-3 form-group">
+              <label for="sel-JobTypeNIDId">Job Type</label>
+              <select id="sel-JobTypeNIDId" name="sel-JobTypeNIDId" class="custom-select" (change)="getDocRegulations();" formControlName="jobTypeId"
+                required>
+                <option selected="" value=""></option>
+                <option [ngValue]="jobType.Id" [attr.data-code]="jobType.Code" *ngFor="let jobType of jobTypesList">
+                  {{jobType.Name}}
+                </option>
+              </select>
+            </div>
+
+            <div class="col form-group">
+              <label for="jobName">MotherFullName</label>
+              <input type="text" id="jobName" name="jobName" formControlName="jobName" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-3 form-group">
+              <label for="sel-NidIssueReasonId">Issuing Reason</label>
+              <select id="sel-NidIssueReasonId" name="sel-NidIssueReasonId" class="custom-select"
+                formControlName="issueReasonId" required>
+                <option selected="" value=""></option>
+                <option [ngValue]="issueReason.Id" [attr.data-code]="issueReason.Code"
+                  *ngFor="let issueReason of issueReasonsList">
+                  {{issueReason.Name}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+
+            <div class="col-2 form-group">
+              <label for="isFirstTime">Is first time?</label>
+              <input type="checkbox" id="isFirstTime" name="isFirstTime" formControlName="isFirstTime"
+                class="form-control">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card h-100">
+        <div class="card-header">
+          <h5>Regulations</h5>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="card-text text-muted" [innerHTML]="regulations">
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="chkAgree" formControlName="agreement" required>
+            <label class="form-check-label" for="chkAgree">Agree</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

@@ -32,6 +32,8 @@ namespace ClientApp.Mapping
             CreateMap<Governorate, LookupBaseResource>();
             CreateMap<PoliceDepartment, PoliceDepartmentResource>();
             CreateMap<PostalCode, PostalCodeResource>();
+            CreateMap<Regulation, RegulationResource>()
+            .ForMember(a => a.DocTypeCode, opt => opt.MapFrom(a => a.DocumentType.Code));;
 
             CreateMap<Request, RequestResourceOut>()
                 .ForMember(a => a.RequesterFullName, opt => opt.MapFrom(a => a.Name.FirstName))

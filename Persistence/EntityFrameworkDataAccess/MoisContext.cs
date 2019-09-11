@@ -55,7 +55,7 @@ namespace Persistence.EntityFrameworkDataAccess
         public DbSet<PoliceDepartment> PoliceDepartments { get; set; }
         //public DbSet<PublicSector> PublicSectors { get; set; }
         public DbSet<Qualification> Qualifications { get; set; }
-        //public DbSet<Regulation> Regulations { get; set; }
+        public DbSet<Regulation> Regulations { get; set; }
         public DbSet<Relation> Relations { get; set; }
         public DbSet<Request> Requests { get; set; }
         public DbSet<Unit> Units { get; set; }

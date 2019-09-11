@@ -2,3 +2,16 @@
   margin-left: 5px;
   margin-right: 5px;
 }
+
+/* .col9{
+  padding: 1px;
+  line-height: 0.5;
+} */
+
+.form-row>.col, .form-row>[class*=col-] {
+  line-height: 1;
+}
+
+.card-body {
+  padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+}

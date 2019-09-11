@@ -76,5 +76,15 @@ namespace Persistence.EntityFrameworkDataAccess
 
             return await query.Select(selector).ToListAsync();
         }
+
+        public async Task<IEnumerable<T>> GetLookups<T>(string includeProperties) where T : class
+        {
+             IQueryable<T> query = _dbContext.Set<T>();
+
+            foreach (string prop in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                query = query.Include(prop);
+
+            return await query.ToListAsync();
+        }
     }
 }

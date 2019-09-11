@@ -52,7 +52,7 @@ namespace ClientApp
                     var services = scope.ServiceProvider;
                     var context = services.GetService<MoisContext>();
                     var passwordHasher = services.GetService<IPasswordHasher>();
-                    DatabaseSeed.SeedAsync(context, passwordHasher);
+                    DatabaseSeed.Seed(context, passwordHasher);
                 }
 
                 host.Run();
